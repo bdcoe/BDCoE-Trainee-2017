@@ -1,6 +1,1 @@
-<<<<<<< HEAD
 hello
-=======
-hii
-..
->>>>>>> 869e0045658dfff94795e9c3ac588fccf147d3bf

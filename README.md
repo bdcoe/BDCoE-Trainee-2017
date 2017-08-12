@@ -19,4 +19,4 @@ GIT COMMANDS:
 
 7- git log   - to see the commit history
 
-8- git push origin <branch>
+8- git push origin branch-name

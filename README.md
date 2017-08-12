@@ -7,9 +7,9 @@ GIT COMMANDS:
 
 2- git config --global user.email "your-email"
 
-3- git clone <repo-url>
+3- git clone repo-url
 
-4- git checkout -b <branch-name>
+4- git checkout -b branch-name
 
 4- git add -A
 
@@ -20,3 +20,5 @@ GIT COMMANDS:
 7- git log   - to see the commit history
 
 8- git push origin branch-name
+
+9- git pull origin master - to update your repo with server

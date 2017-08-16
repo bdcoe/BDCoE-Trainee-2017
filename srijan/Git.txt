@@ -1,0 +1,16 @@
+                                     Git
+
+Git is a version controlled system in which we can access various versions of any program with is on the github.
+There are three types of 
+1.Local version controlled system.
+2.Central version controlled system.
+3.Distributed version controlled system.(eg. Git)
+ 
+Version Control is essential to development, even if you're working by yourself because it protects you from yourself. If you make a mistake, it's a simple matter to rollback to a previous version of your code that you know works.
+
+Properties of Git:
+1.Snapshot-
+2.Locally available.
+3.Unique key is generated.
+
+

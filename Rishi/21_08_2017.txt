@@ -1,0 +1,82 @@
+What I learned and what we did since last 2-3 days :
+1.Installed Git
+  ~used for version control
+  ~must when working in team
+2.Installed Linux on VM
+3.Virtulisation
+  ~Two types
+  ~~Type 1 : Mostly used on Servers.
+	     Presence of Management Control
+      	     ~A software which companies charge for using.
+	     ~Manages the server
+	     ~(8+10) GB memory can be assigned ion a 16 GB Server.
+		*Controlled by Management console*
+  ~~Type 2 : Example : VMware
+	    ~No management console.
+	    ~We can run as many OS as we want.
+	    ~(8+10) GB memory can't be assigned on a 16 GB system.
+ ~Why we use VMware:
+  ~~Testing Softwares.
+  ~~Trying different OS...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Next Day:
+~Instaled Hadoop single node on linux running on VMware.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Terminal Commands of linux and what they do :
+
+$ifconfig : ip details 
+$ls : List contents of a directory
+$ls -l : Also show .folders
+$ls -l : List contents of director with all other details like read/write rights
+
+$sudo su : Using terminal as a superuser just like ADMIN in Windows
+$sudo -i : *same as above*
+
+$clear : clear terminal
+$ctrl + z : Stop current running process on terminal
+$exit : exit ~~used to exit su mode
+
+$cd : change directory
+$cd .. : move a level down
+$mkdir : make directory
+$rm : remove
+$rm : remove
+
+$man <command>: manual of a command
+
+$chmod : giving rights to other users
+$chown : change ownership
+
+$cat <file name>: display content of a file in terminal
+$gedit <file name> : Opens editor
+$nano <file name> : opens nano editor
+
+$ps : shows running process with <pid>'s
+$kill -9 <pid> : kills a running process
+
+$apt-get install <package name> : used for installing packages
+$apt-get update : apdates all packages
+$apt-get upgrade : upgrade the OS
+$apt-get purge <package name> : uninstall the package
+$ssh user@ip : for remote access
+$whoami  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Doubts:
+~When we run an os on VMware, it uses ethernet, instead of Wireless.
+~we created a unique ID for ssh while installing hadoop.
+ do we need it while accessing a PC on LAN.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What I'm currently working on :
+~tried different linux distro's
+~finally felt that ubuntu is best for me
+~Dual Booted it with W10
+~Will try to install hadoop on it.
+~migrate from W10 to linux
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sorry, for not commiting since last three days. 
+I wasn't in hostel
+I was commuting to college from home, due to some family issue.
+I'm back now...........................................

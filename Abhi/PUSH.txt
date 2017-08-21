@@ -1,0 +1,54 @@
+horizontal scaling and verticl scaling-
+	In a database world horizontal-scaling is often based on
+	 partitioning of the data i.e. each node contains only part of the data , in vertical-scaling the data
+	 resides on a single node and scaling is done through multi-core i.e. spreading the load between the CPU and RAM resources of that machine.
+
+	With horizontal-scaling it is often easier to scale dynamically by adding more systems into the existing  -
+	Vertical-scaling is often limited to the capacity of a single machine, upgrading beyond that capacity often involves downtime and comes with an upper limit.
+
+
+five v's of big data
+vol
+variety
+visualization
+valence-affinity of data for problem
+variability-part of variety. Drink coffee in same place for continuous days but taste is variable
+volatality
+validity-old data may not apply to current situations
+vulnerability-
+value
+
+hadoop latest ver 3.0.alpha in this R.F. is only 1.5. using hamming code
+
+hdfs-hadoop distributed file system
+replication factor- R F 3 hai mtlb data 3 jagah store hua hai. 3 copies of data to prevent data loss
+rack awareness- mainly all servers are arranged in stack format.it states that no 2 copies of data can remain in 1 server
+.tar.gz extension tar for compressed (1 method hai g zip.iske through compress hui hai)
+********MAP REDUCE******
+Input Splits:
+Input to a MapReduce job is divided into fixed-size pieces called input splits Input
+ split is a chunk of the input that is consumed by a single map
+Mapping
+This is very first phase in the execution of map-reduce program. In this phase data in
+ each split is passed to a mapping function to produce output values. In our example, 
+ job of mapping phase is to count number of occurrences of each word from input splits
+ (more details about input-split is given below) and prepare a list in the form of <word, frequency>
+Shuffling
+This phase consumes output of Mapping phase. Its task is to consolidate the relevant records
+ from Mapping phase output. In our example, same words are clubed together along with their respective frequency.
+Reducing
+In this phase, output values from Shuffling phase are aggregated. This phase combines values
+ from Shuffling phase and returns a single output value. In short, this phase summarizes the complete dataset.
+yarn- A resource containing the R.M. and some tools regarding HDFS.more details at the back of the copy...
+
+************Hadoop common-**********
+for coding hadoop func in java first we have to import hadoop jar files. without them code wont be compiled.The Hadoop Common is considered as the core of the 
+framework as it provides essential services and basic processes such as abstraction of the underlying operating system and its file system. Hadoop Common 
+also contains the necessary Java Archive (JAR) files and scripts required to start Hadoop. The Hadoop Common
+ package also provides source code and documentation, as well as a contribution section that includes different projects from the Hadoop Community.
+
+to add a new node to hadoop is possible but difficilt.cause if a new node is added it is nearly blank.so probability of it getting a chancve to execute
+a command on the data contained by it is very low.so data needs to be redistributed among slaves.this is called node balancing.
+RPC-remote procedure call using ssh
+ssh command gives remote access.creates secured cell.gives terminal access.ssh keygen creates a key and sores it in a file authorized host.no need for 
+key in future

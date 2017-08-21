@@ -1,0 +1,65 @@
+BIG DATA
+
+collection of data sets so large and complex that becomes difficult to process using on hand database system tools.
+
+1. EVOLUTION OF DATA-:
+
+# evolution of technology
+# social media
+# IOT
+
+2. HOW TO CONSIDER A DATA IS BIG DATA?
+
+* 5 v'S OF DATA-
+
+#Volume
+#variety - @ structured
+           @ semi- structured
+           @ un-structured
+#velocity
+#value
+#veracity ( uncertainity and inconsistency in the data)
+
+3.HOW TO USE BIG DATA AS OPPORTUNITY?
+
+#cost reduction
+# faster and better decision making
+# improved services or products
+
+4. PROBLEMS OF BIGDATA
+
+#Storing exponentially growing huge datasets.
+#processing data having complex structure.
+#processing data faster.
+
+HADOOP - AS - SOLUTION...
+
+hadoop ( a framework that allows to store and process large data in parallel and distributed format )
+
+TWO COMPONENTS-:
+
+# HDFS (hadoop distributed file system)
+
+store across the cluster
+
+# MAP REDUCE
+
+store across HDFS.
+
+HDFS has two components-:
+@ namenode ( that contains metadata)
+@  datanode ( data is stored)
+
+5.HOW HDFS SOLVE THE PROBLEM OF BIGDATA ?
+
+# data is stored in nodes by dividing into blocks.
+# solve scaling problem.
+# store all kinds of data.
+# follow WORM ( write over read many)
+# provides parallel processing of data.
+
+6. HADOOP ECOSYSTEM-:
+#  apache hive
+# apache pig
+# spark
+# hbase

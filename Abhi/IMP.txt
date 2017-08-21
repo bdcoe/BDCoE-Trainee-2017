@@ -1,0 +1,5 @@
+
+
+https://www.hackerrank.com/challenges/sherlock-and-probability/problem
+
+Cant seem to understand the sample input and output...

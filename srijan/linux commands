@@ -1,0 +1,23 @@
+     LINUX COMMANDS
+
+1.To make a file - touch (filename)
+2.to see all thefiles - ls
+3.to open a text editor- nano
+4.there are total 7 text editors which can be opened by 
+ctrl+alt+f1 to f7
+
+5.to close the text editors - ctrl+alt+f8
+6.to see the file content in the terminal itself - cat filename
+7.to give complete access to the user - sudo chmod 777 fiename
+8.to change the owner - sudo chown newownername oldusername
+9.to see all your commands - history
+10.to make zip file - tar -czf file.tar filename
+11.to extract your file - tar -xvf file.tar
+12.to clear screen - clear
+13.to delete file - rm fileneme
+14.to see the running processes - ps
+15.to shutdown or reboot - shutdown or reboot
+16.to become the root user - sudo -i
+17.to install a file - apt-get install "name"
+18.to uninstall a neew file - apt -get purge "name"
+19.to update linux- sudo apt-get update 

@@ -1,0 +1,52 @@
+
+
+                                        HADOOP 
+
+It is a framework that allows us to store and process large data sets in parallel and distributed manner. 
+
+To solve some of the problems of big data Hadoop was introduced.
+ 
+Five important v's of hadoop:-
+1.volume
+2.variety
+3.velocity
+4.value
+5.veracity
+
+the latest version of hadoop is version 3.0 alpha.
+The two importan tparts of hadoop is:-
+1.hdfs-hadoop distributed file system-It is a abstraction over the resources .
+2.mapreducer-It provides parallel processing of data i.e. data is processed on different nodes simultaneously.
+
+--->Data is replicated on the nodes to prevent loss of data.
+-->the default block size is 218 mb.
+
+
+Hdfs is further divided into two parts:-
+1.name node-it is the master unit which maintains and manages the data nodes.a part of name node called as secondary name node stores the 
+meta data.It also receives the heartbeat after every  3 seconds.
+2.data node-The data is stored on the data nodes which are commodity hardwares so the chance of data loss is very high so these datanodes are replicated properly.
+
+
+Replicattion factor-The number of times the replication of data is done.Usually replication facto is kept 3.
+
+
+Hadoop Common-Hadoop Common refers to the collection of common utilities and libraries that support other Hadoop modules. It is an esential part or module of the Apache Hadoop Framework, along with the Hadoop Distributed File System (HDFS), Hadoop YARN and Hadoop MapReduce
+
+Map reduce flowwork:-
+
+    INPUT---> SPLITTING---> MAPPING---> SHUFFLING OR SORTING--->REDUCING--->FINAL RESULT
+
+the work of mapping is done in name node and the work of redusing is done in data node.
+
+
+YARN-Yet Another Resource Manager--->YARN is one of the key features in the second-generation Hadoop 2 version.Its a cluster management technology and a part of MAPREDUCER.
+it has 2 parts :-
+1.Resource manager-receives the processing requests.
+2.node manager-it has two parts:-
+
+    1.application master-it process the actual data.
+    2.container-place where the processing operation takes place
+
+QUESTION------><><> sir in the hadoop cluster architecture what is the core switch???
+

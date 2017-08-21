@@ -1,0 +1,41 @@
+some characteristivs of big data:
+volume
+variety
+value
+verasity
+visualisation'valence
+variability
+validity
+vulnerability
+vilatile
+
+in ".tar.gz" gz stands for gzipped
+
+block size of hdfs is 128 mb , so ,data transfer rate is very high, 
+and
+while filling of data in blocks , if some block is partially filled ,  the the remaining block memory  doesnt get wasted ,  new data can use that previous block.
+
+Hadoop components are rack-aware , means that , used in fault tolerance  , by placing one block replica/copy on a different rack. This provides data availability in rack failure .
+latest:::    hadoop 3.0 alpha
+   
+
+name node contains meta data of data
+
+The ResourceManager (RM) is responsible for tracking the resources in a cluster, and scheduling applications
+
+
+The ResourceManager has two main components: Scheduler and ApplicationsManager.
+
+The Scheduler is responsible for allocating resources to the various running applications subject to familiar constraints of capacities, queues etc. The Scheduler is pure scheduler in the sense that it performs no monitoring or tracking of status for the application. Also, it offers no guarantees about restarting failed tasks either due to application failure or hardware failures. 
+
+The ApplicationsManager is responsible for accepting job-submissions, negotiating the first container for executing the application specific ApplicationMaster and provides the service for restarting the ApplicationMaster container on failure. The per-application ApplicationMaster has the responsibility of negotiating appropriate resource containers from the Scheduler, tracking their status and monitoring for progress.
+
+A MapReduce job usually splits the input data-set into independent chunks which are processed by the "map" tasks in a completely parallel manner. The framework sorts the outputs of the maps, which are then input to the "reduce" tasks.The framework takes care of scheduling tasks, monitoring them and re-executes the failed tasks.
+
+The MapReduce framework consists of a single master JobTracker and one slave TaskTracker per cluster-node. The master is responsible for scheduling the jobs' component tasks on the slaves, monitoring them and re-executing the failed tasks. The slaves execute the tasks as directed by the master.
+
+Mapper maps input key/value pairs to a set of  key/value pairs.
+
+Reducer reduces a set of intermediate values which share a key to a smaller set of values.
+
+Partitioner partitions the key space.

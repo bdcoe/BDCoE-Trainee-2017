@@ -1,0 +1,25 @@
+hdfs version
+hdfs dfs -ls
+hdfs balancer
+hdfs dfs -mkdir /user/username
+start -dfs.sh
+start -yarn.sh
+start -all.sh
+hdfs dfs -put file
+hdfs dfs -du -s -h output
+hdfs dfs -rm hi
+hdfs dfs -rm -r output
+hdfs dfs -copyfromlocal
+hdfs dfs -cp hello try/
+hdfs dfs -copytolocal hrllo /homr/bdcoe/Documents
+hdfs dfs -get hrllo /homr/bdcoe/Documents
+hdfs dfs -tail hello
+hdfs dfs -mv hello try/
+hdfs dfs -setrp -w 2 try/hello
+hdfs dfs -expunge
+hdfs dfs
+hdfs dfsadmin -report
+hdfs dfsadmin -safemode leave
+hdfs dfsadmin -safemode enter
+hdfs dfs -cat filename/*
+

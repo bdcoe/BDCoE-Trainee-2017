@@ -1,0 +1,79 @@
+-Git Commands
+--git init
+Initializes a git repository – creates the initial ‘.git’ directory in a new or in an existing project. 
+--git clone
+Makes a Git repository copy from a remote source. Also adds the original location as a remote so you can 
+fetch from it again and push to it if you have permissions.
+--git add
+Adds files changes in your working directory to your index.
+--git rm
+Removes files from your index and your working directory so they will not be tracked. 
+--git commit
+Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch 
+to point to that new commit.
+--git status
+Shows you the status of files in the index versus the working directory. It will list out files that are 
+untracked (only in your working directory), modified (tracked but not yet updated in your index), and 
+staged (added to your index and ready for committing).
+--git branch
+Lists existing branches, including remote branches if ‘-a’ is provided. Creates a new branch if a branch name 
+is provided.
+--git checkout
+Checks out a different branch – switches branches by updating the index, working tree, and HEAD to reflect 
+the chosen branch.
+--git merge
+Merges one or more branches into your current branch and automatically creates a new commit if there are no 
+conflicts. 
+--git reset
+Resets your index and working directory to the state of your last commit.
+--git pull
+Fetches the files from the remote repository and merges it with your local one.
+--git push
+Pushes all the modified local objects to the remote repository and advances its branches. 
+
+
+
+-Linux Commands
+
+1. ls
+The ls command - the list command - functions in the Linux terminal to show all of the major directories 
+filed under a given file system. 
+
+2. cd
+The cd command - change directory - will allow the user to change between file directories. As the name command 
+name suggest, you would use the cd command to circulate between two different directories.
+
+3. mv
+The mv command - move - allows a user to move a file to another folder or directory. Just like dragging a file 
+located on a PC desktop to a folder stored within the "Documents" folder, the mv command functions in the same 
+manner. 
+
+4. man
+The man command - the manual command - is used to show the manual of the inputted command.  Inputting the man 
+command will show you all information about the command you are using.
+
+5. mkdir
+The mkdir - make directory - command allows the user to make a new directory. Just like making a new directory 
+within a PC or Mac desktop environment, the mkdir command makes new directories in a Linux environment.
+
+6. rmdir
+The rmdir - remove directory - command allows the user to remove an existing command using the Linux CLI. 
+
+7. touch
+
+The touch command - a.k.a. the make file command - allows users to make files using the Linux CLI. 
+Just as the mkdir command makes directories, the touch command makes files. Just as you would make a .doc or 
+a .txt using a PC desktop, the touch command makes empty files.
+
+8. rm
+
+The rm command - remove - like the rmdir command is meant to remove files from your Linux OS. Whereas the rmdir 
+command will remove directories and files held within, the rm command will delete created files.
+
+9.pwd
+to show the current working directory.
+
+10.clear
+The clear command does exactly what it says. When your Linux CLI gets all mucked up with various readouts and 
+information, the clear command clears the screen and wipes the board clean. Using the clear command will take 
+the user back to the start prompt of whatever directory you are currently operating in.

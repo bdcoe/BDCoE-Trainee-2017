@@ -1,0 +1,20 @@
+hdfs version--to know ver of hadoop
+hdfs dfs -ls--to know whats in hadoop
+hdfs balancer--to balance data in all new nodes
+hdfs dfs--to know all commands in hadoop
+start dfs.sh--to start dfs
+start yarn.sh--to start yarn
+start-all.sh--to start both dfs and yarn
+hdfs dfs -rm file_name--to remove a file 
+hdfs dfs -rm -r foldername--to remove a directory
+hdfs dfs -expunge--to empty recycle bin
+hdfs dfsadmin -safemode leave--to leave safemode
+hdfs dfsadmin -safemode enter--to enter safemode
+hdfs dfsadmin -report--to know no of active nodes
+hdfs dfs -setrep -w RF directory/file_name--to set replication factor
+hdfs dfs -tail file_name--to know last lines of a file
+hdfs dfs -copyfromlocal filename--to copy file in hadoop file sys
+hdfs dfs -du -s -h outpufile--to know size of output
+
+
+Also still studying swing class in java and a bit of python from Learning Python by O'Reilly written by mark lutz

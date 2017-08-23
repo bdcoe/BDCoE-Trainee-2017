@@ -1,0 +1,64 @@
+	      <<   BIG DATA / HADOOP  >>
+
+--> Big Data is the term for the collection of data sets so large and complex that it becomes difficult to process using on hand DBS tools on tradtional data processing applications.
+--> V's in Big Data :
+			** total there are 42 V's. Some of them are :
+				1. Volume
+				2. Variety
+				3. Velocity
+				4. Value
+				5. Veracity ( uncertainity and inconsistencies in the data )
+--> Apache HADOOP
+	:: it is a framework that allows us to store and process large data sets in parallel and distributed fashion.
+	
+		           HADOOP
+
+      HDFS  		      |   MAPREDUCE
+:: Hadoop distributed file    |  :: Allows parallel & 
+  system		      |   distributed processing
+   			      |
+
+--> Hadoop Distributed File System
+
+	:: 	NAME NODE <--> SECONDARY NAME NODE ( MASTER DAEMONS )
+				/ \  
+			       /   \  
+			      /	    \
+			     /	     \
+			DATA NODE 1   DATA NODE 2 
+        
+	:: Name Node --> Maintains and merges Data Nodes
+		     --> Records Metadata
+		     --> Recieves Heartbeat( to know if data node is alive )
+	
+	:: Data Node --> Slave Node    
+		     --> Stores actual data
+
+	:: Secondary Data Node
+
+	
+		Name Node			Secondary Node
+		   |					|
+		Edit Log			  Edit Log
+		   |					+
+		fsImage				   fsImage
+		   |				---------------
+		edit log(new)			  fsImage(new)
+
+       :: HDFS data block
+		## each file stored as blocks
+		## the default size of each is 128 MB in Hadoop 2.x (64 MB in Hadooop 1.x)
+		
+       :: Replication factor
+		## each data block is replicated by a factor ( 3 by default ) and are distributed across different DN's . 
+
+
+
+
+
+
+
+
+
+
+	

@@ -1,0 +1,29 @@
+12/08/17
+
+Version Control System
+	
+	:: Local VCS
+	:: Central VCS
+	:: Distributed VCS -> GIT
+
+## While saving  a file in Git a unique 40 character lng key is generated ranging b/w
+   0-9,a-f.
+
+## Key Terms :
+
+	(1.) Clone : Server to System
+	(2.) git add : add all modified and new files in the current directory. 
+	(3.) commit : saves the changes offline
+	(4.) push : pushes to the server
+	
+## Commands :
+	
+	(1.) git config -- global username "USER_NAME"
+	(2.) git config -- list
+	(3.) pwd 
+	(4.) git commit -m "ADDED_NEW_CHANGES"
+	(5.) git checkout ' UNIQUE 40 CHARACTER CODE '
+	(6.) git checkout -b 'BRANCH_NAME'
+	(7.) git add -A
+	(8.) git push origin master
+	(9.) git pull origin master

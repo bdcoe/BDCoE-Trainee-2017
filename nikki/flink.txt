@@ -1,0 +1,39 @@
+Flink is the next generation Big Data tool 
+and also known as 4G of Big Data. 
+It can do easily:
+*Batch Processing
+*Interactive processing
+*Real-time stream processing
+*Graph Processing
+*iterative Processing
+*In-memory processing
+
+Flink is an alternative of MapReduce,
+ it processes data more than 100 times faster than MapReduce. 
+Flink is independent of Hadoop 
+but it can use HDFS to read, write, store, process the data.
+Flink does not provide its own data storage system. 
+It takes data from distributed storage.
+
+MODES:
+**Local mode – On single node, in single JVM
+**Cluster – On a multi-node cluster,
+                     with following resource manager.
+      *Standalone – This is the default resource manager which is shipped with Flink.
+      *YARN – This is very popular resource manager, it is part of Hadoop, introduced in Hadoop 2.x
+      *Mesos – This is a generalized resource manager.
+
+FEATURES
+*Streaming 
+*High performance 
+*Low latency 
+*Event Time and Out-of-Order Events 
+*Lightning fast speed
+*Fault Tolerance 
+*Memory management 
+*Broad integration
+*Stream processing 
+*Program optimizer 
+*Scalable 
+*Easy and understandable Programmable APIs
+

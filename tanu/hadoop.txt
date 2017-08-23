@@ -1,0 +1,62 @@
+                             THINGS THAT I LEARNED TODAY
+
+
+ARCHITECTURE OF HADOOP_:
+
+1. HADOOP COMPONENTS-
+# hdfs
+# map reduce
+
+* hdfs contains-: @ name node
+                  @  datanode
+it a storing process.
+
+* yarn/ map reduce contains -: @ resource manager
+                               @ node manager
+
+it is a processing process.
+
+#NAMENODE--
+
+@ master daemon.
+@ maintains and manages datanodes.
+@ record metadata
+
+# DATANODE--
+
+@ slave daemon
+@ stores actual data
+@ serves read and write requirements for client
+
+QUES. HOW DATA IS STORED IN HDFS?
+
+ANS. # as blocks
+# default size of each block is 128 mb in apache hadoop 2.x
+
+# HADOOP COMMANDS----
+
+1. hadoop version
+check the version of hadoop
+
+2. hadoop fsck/
+checks the health of file system
+
+3. hdfs dfs -ls /
+list all hdfs files/directories.
+
+4. hdfs dfs -put welcome or copy to local
+copy data from local system to hdfs.
+
+5. vi welcome(name of the file)
+create new file
+
+6. cat welcome
+to check and read the contents of the file
+
+7. hdfs dfs -help
+list of commnds and its description
+
+8. hdfs balancer
+
+9. hdfs dfs -mkdir /user/bdcoe
+ 

@@ -1,0 +1,49 @@
+21/8/2017
+Smart data is a data which is capble of enough to make decisions without centralized processing
+		Hadoop
+ -Hadoop distributed file system
+  -Block size -128 MB
+  -file size-4 GB
+  -volume size-2 TB
+  -Replication factor - 3
+ -Mapreduce breaks down data into chunks and they are mapped through parallel processing{parallel processing is processing of data through different processors on same system}
+
+Scaling
+ -Horizontal Scaling - no of systems are increased to increase performance
+ -Verticl Scaling- configuration is improved
+
+Architecture of hadoop
+ -namenode-the master node tracks all the files and stores metadata of hdfs
+ -job tracker - takes job submission from client server than allocates reources and forward them to task tracker
+ -task tracker - accepts task from job tracker
+ -data node - slave nodes hold the data 
+If a data node fails, data is fetched from its replica and its failure is addressed through heartbeat every 3 sec.
+ -Seconday Name Node- collects meta data from name node every hour and activates in case of failure of name node
+
+Disadvantages 
+- Bottle necking problem at job tracker and 
+-single node failure
+
+JT,NN & SNN are masters whereas TT & DN are slaves
+
+	FRAMEWORK
+It is a collection similar to a library or a library is said to be a subset of framework.
+
+YARN(Yet another resource negotiator)monitors processing of operation on cluster nodes.
+containers are used to execute operations and are independent of each other
+
+HADOOP 2.0 add multiple name nodes resource manager and app manager and yarn was introduced.
+
+Node Balancing(Data is adequately shared in every node)
+Task Balancing(Task is performed by every node when there is not a very huge mismatch)
+
+CLUSTER SLAVES USE HOMOGENOUS HARDWARE INSTEAD OF COMMODITY HARDWARE SO THAT LES TIME IS CONSUMED IN BALANCING
+DAEMONS- are basically pre compiled JAVA programs that run in the bckground while HDFS is operating. Each Daemon has its independent JVM.
+MODES
+Stand Alone mode
+Pseudo distributed mode
+A Fully Distributed Mode
+
+INPUT SPLIT
+Data is split into boxes but improper splitting of data is not allowed. Data is accepted in key value pair where this pair is given in the form of box glasses.
+SSH provides remote access.  																   	

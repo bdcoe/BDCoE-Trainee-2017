@@ -1,0 +1,148 @@
+1. Create a directory in HDFS at given path(s).
+
+
+  hadoop fs -mkdir <path or paths >
+
+  Example:
+
+  hadoop fs -mkdir /user/saurzcode/dir1 /user/saurzcode/dir2
+
+
+
+
+
+2.  List the contents of a directory.
+
+
+    hadoop fs -ls <args/path>
+
+    Example:
+
+	hadoop fs -ls /user/saurzcode
+
+3. Upload and download a file in HDFS.
+
+   `Upload:
+	
+	hadoop fs -put:
+
+	hadoop fs -put <localsrc> ... <HDFS_dest_Path>
+
+	Example:
+
+	hadoop fs -put /home/saurzcode/Samplefile.txt  /user/saurzcode/dir3/
+
+ 	  Download:
+
+	hadoop fs -get:
+
+
+
+	hadoop fs -get <hdfs_src> <localdst>
+
+	Example:
+
+	hadoop fs -get /user/saurzcode/dir3/Samplefile.txt /home/
+
+
+
+
+
+4. See contents of a file
+
+
+	hadoop fs -cat <path[filename]>
+
+
+
+5. Copy a file from source to destination
+
+
+	hadoop fs -cp <source> <dest>
+
+	Example:
+
+	hadoop fs -cp /user/saurzcode/dir1/abc.txt /user/saurzcode/dir2
+
+
+
+
+
+6. Copy a file from/To Local file system to HDFS
+
+	   copyFromLocal
+
+
+	    hadoop fs -copyFromLocal /home/saurzcode/abc.txt  /user/saurzcode/abc.txt
+
+		Similar to put command, except that the source is restricted to a local file reference.
+
+	    copyToLocal
+
+
+
+	hadoop fs -copyToLocal [-ignorecrc] [-crc] URI <localdst>
+    
+	Similar to get command, except that the destination is restricted to a local file reference.
+
+
+
+
+
+7. Move file from source to destination.
+
+               Moving files across filesystem is not permitted.
+
+
+	hadoop fs -mv <src> <dest>
+	
+	Example:
+	
+	hadoop fs -mv /user/saurzcode/dir1/abc.txt /user/saurzcode/dir2
+	
+
+
+
+
+
+
+8. Remove a file or directory in HDFS.
+	
+	Remove files specified as argument. Deletes directory only when it is empty
+	
+	
+	hadoop fs -rm <arg>
+	
+	Example:
+	
+	hadoop fs -rm /user/saurzcode/dir1/abc.txt
+	
+	Recursive version of delete.
+	
+	
+	hadoop fs -rmr <arg>
+		
+	Example:
+	
+	hadoop fs -rmr /user/saurzcode/
+	
+
+
+
+
+
+
+
+
+
+9. Display last few lines of a file.
+	
+	Similar to tail command in Unix.
+	
+
+	hadoop fs -tail <path[filename]>
+	
+	Example:
+	
+	hadoop fs -tail /user/saurzcode/dir1/abc.txt
+

@@ -1,0 +1,16 @@
+Apache Hadoop was developed with the purpose of having a low–cost, redundant data store that would allow organizations to leverage big data analytics at economical cost and maximize profitability of the business.
+
+
+Architechture---
+The master node for data storage is hadoop HDFS is the NameNode and the master node for parallel processing of data using Hadoop MapReduce is the Job Tracker.Every slave node has a Task Tracker daemon and a DataNode that synchronizes the processes with the Job Tracker and NameNode respectively.
+Application data is stored on servers referred to as DataNodes and file system metadata is stored on servers referred to as NameNode. 
+In Hadoop architectural implementation the master or slave systems can be setup in the cloud or on-premise.
+The NameNode and DataNode communicate with each other using TCP based protocols.
+
+
+*a replication factor of 3, which means that the cluster stores three identical copies of each bucket on separate nodes.With two nodes down, you still have one complete copy of data available on the remaining peers.
+
+*new searched-
+framework and library--
+A library is a reusable piece of code which you use as it comes i.e it does not provide any hooks for you to extend it. A library will usually focus on a single piece of functionality, which you access.
+A framework is a piece of code which dictates the architecture your project will follow. Once you choose a framework to work with, you have to follow the framework's code and design methodologies. 

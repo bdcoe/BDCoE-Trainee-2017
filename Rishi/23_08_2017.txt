@@ -1,0 +1,78 @@
+Things learned in these 2 days: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 1:
+~File systems
+ Decides how data is stored and retrieved
+ Examples:...NTFS..FAT32..EXT4..HDFS..GFS..
+ 
+~Hadoop
+ *A framework
+ *Process Dataset using Mapreduce
+ 
+ Modules:
+ _Hadoop Common 
+   *core
+   *contains libaries   
+ _HDFS
+   *a file system
+ _YARN
+   *Yet Another Resource Negotiator
+   *Manages resorces
+ _MapReduce
+   *Process data
+
+Modes of Hadoop:
+*StandAlone
+*Pseudo Distriduted
+*Fullly Distributed
+
+Architecture 
+*Hadoop consists of 1 Master and several slaves
+*Master assign jobs to slaves
+*Master consists of Secondary NameNode, NameNode, JobTracker
+*Slave consists of TaskTracker, DataNodes
+
+Nodes send HEARTBEATS to NameNode every few minutes
+Sec.NameNode stores metadata of NameNode
+*It copies every hour.....
+NameNode stores metadata of slaves
+
+Rack Awarness
+*Name node have information of every bit of data using rackID
+
+Hdfs NodeBalancer
+*Data may not be equally distributed on different nodes, which causes problems. 
+ Probablity of assigning a job to a node which have very less data is very low.
+ So DataBalancer is used to balance data across all nodes
+
+TaskBalancer
+*Just like NodeBalancer but balances task.
+*A job will be assigned to a node which is currently not performing any job.
+*It won't assign it to a node already performing a job.
+
+File Replicating factor
+*Default is 3
+*A data is stored in 3 locations. 2 of them on same rack and last one on different node.
+  
+Box Classes
+*IntWritable
+*LongWritable
+*FloatWritable
+*DoubleWritable
+*Text
+
+Hadoop 1.0 vs Hadoop 2.0
+*Implementation of YARN
+
+MapReduce
+*Processes data in parallen manner
+*Splits data in blocks
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Day 2:
+<will update soon>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Doubts:
+What are scheduler in Hadoop?
+What if Sec.NameNode fails?
+

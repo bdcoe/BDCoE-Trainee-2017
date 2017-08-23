@@ -1,0 +1,36 @@
+SPARK
+characteristics
+1. very fast-upto 100 times faster than hadoop
+2. can be used with any file sys.
+3. more interactive than hadoop
+4. loads the entire data on RAM thus making it faster
+
+Framework of spark
+=>program
+=>library- SparkR + GraphX + Streaming + MLLib etc. All APIs included however in hadoop all softwares are to be separately
+installed
+=>management- uses cluster managers of diff types like that of hadoop or its own
+=>storage- can use any file system
+
+Modes
+1 Batch
+2 Iterative
+3 Interactive
+4 Streaming
+
+RDD (Resilient Distributed Dataset)
+1 immutable
+2 lazy evaluation
+3 caching
+4 type interference
+
+
+DAG SCHEDULER 
+
+When any action is called on the RDD, Spark creates the DAG and submits it to the DAG scheduler.
+
+The DAG scheduler divides operators into stages of tasks. A stage is comprised of 
+tasks based on partitions of the input data. The DAG scheduler pipelines operators together. 
+For e.g. Many map operators can be scheduled in a single stage. The final result of a DAG scheduler is a set of stages.
+The Stages are passed on to the Task Scheduler.The task scheduler launches tasks via cluster manager. The task 
+scheduler doesn't know about dependencies of the stages.

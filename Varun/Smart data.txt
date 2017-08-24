@@ -1,0 +1,11 @@
+	What is Smart Data and its need?
+
+Smart data is the data which is formatted at the source without centralized processing such
+that it can take appropriate action on the source itself. Unlike traditional data
+which depended toomuch on batch processing to produce outputs it can give quicker results.
+
+It has various applications in various fields-
+ - Driverless cars need immediate action based on data by sennsors
+ - In the field of big data 
+     -used in network intrusion and detection
+     -fraud detection

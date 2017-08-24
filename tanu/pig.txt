@@ -1,0 +1,61 @@
+                          APACHE PIG
+
+open source high level dataflow system.
+introduced by yahoo.
+provides abstraction over map reduce.
+
+*WHY GO FOR PIG WHEN MR IS THERE?
+
+ANS. 1.) pig uses 1/20 lines of code then the codes used in MR.
+     2.)development time gets reduced
+
+* DIFFERENCE BETWEEN PIG AND MR?
+
+PIG-:
+a.) high level dataflow.
+b.) no need to write complex programs.
+c.)built in support for data opt. like join,filter etc.
+d.) provides nested datatypes like tuples,maps,bags.
+
+MR-:
+a.)low level.
+b.) need to write program in java/python.
+c.) performing data opt in MR is humongous task.
+d.) nested datatypes are not there.
+
+*ADVANTAGES OF APACHE PIG-:
+
+a.)can take any datatype. 
+b.)easty to learn,write and read.
+c.) extensible by UDF
+
+@@SCOOP----
+tool through which one can move from RDMS to HDFS and vice versa.
+
+
+*ARCHITECTURE-:
+pig latin language---->gruntshell---->parser----->optimizer------->compiler--------->execution engine------>MR----->HDFS
+
+
+*RUNNIG MODES------
+
+1. MR--: default mode,command: PIG
+2. LOCAL MODE---: command: PIG -x local
+
+* DATA MODELS------
+$ atom ->> basic datatypes
+$ tuple->>set of fields
+$ bag->> collection of set of tuples
+$ map->> key value pairs
+
+*PIG OPERATORS----
+
+# LOAD
+# FOREACH
+# FILTER
+# JOIN
+# ORDER BY
+# STORE
+# DISTINCT
+# GROUP
+# COGROUP

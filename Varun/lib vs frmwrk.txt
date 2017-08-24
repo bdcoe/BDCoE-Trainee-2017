@@ -1,0 +1,9 @@
+Difference between library and framework?
+ 
+ -Library is basically a subset of framework. It is a collection of classes that 
+are used by the programmer according to his need.
+ -Framework is a predefined skeleton on which an application is to be developed.
+ 
+Key Differences
+-Libraries respond to the programmer while programmer responds to the keyword.
+-Framework contains libraries.

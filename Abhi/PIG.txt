@@ -1,0 +1,22 @@
+PIG
+It is a special platform to make the normal user who is not much familiar with java understand and implement
+map reduce. It operates on the scripting language pig latin. It can run on hadoop as well as stand alone.
+
+tar -xvf pig-0.15.0.tar.gz |\
+sudo mv pig /usr/local/    | \
+cd /usr/local/pig/         |  commands to install PIG   
+cd bin                     | /
+./pig -x local             |/
+a = LOAD 'File path' using PigStorage(',');  ==>>command to import a file with separators
+dump a; ==>> print a variable
+c = union a,b;==>> unnion
+SPLIT c into d if $0>=5 , e if $0<5;==>> partioning based on conditions
+f = FILTER c BY $0>=5;==>> filtering c by checking its elements
+g= GROUP c BY $1;
+k = FOREACH c GENERATE$1 $1, $1*$2;==>>to generate a new data set with 2nd column multiplied by 1st column
+dump f;
+a = LOAD '/homr/bdcoe/Desktop/file.txt';
+b = FOREACH a GENERATE flatten (TOKENIZER((chaararray)$0)) as word;
+c = GROUP b BY word;
+d = FOREACH c GENERATE group,COUNT(b);
+history;

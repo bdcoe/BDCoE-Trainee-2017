@@ -1,0 +1,49 @@
+##################################################################################
+Spark
+
+*An openSource Framework
+*Can work on live data(sort of)
+*Can be used over Hadoop 
+*Can also be used without Hadoop
+*Vary fast compared to Hapoop MapReduce
+ (x100 , x10)
+*Use for:-
+ ~Iterative computing-for ML
+ ~Live 
+ ~Intractive Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Languages which can be used :
+ ~Scala
+ ~Python
+ ~R
+ ~Java
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Libraries Included
+ ~GraphX
+  ~~Used for graph Processing 
+ ~MLlib
+ ~Spark Streaming
+  ~~Unlike Hadoop Batch processing, Spark make batches of data of 1 second or more
+    and then process it. So it nearly works on live data
+ ~and many more...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Resilient Distributed Dataset (RDD)
+*A DataStructure
+*Fault Tolerance
+*Immutable
+*Lazy Evaluation
+ ~First collect all the data then processes on it when final ultimatum is given
+*Caching
+ ~Least Recently Used (LRU)
+  Spark manages memory efficiently
+  It move least recently used data to Disk and free RAM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Differences (Hadoop and Spark)
+~Easy to use
+ No need to configrue---just import the library
+~Fast, nearly live processing
+~Spark mainly uses RAM, hence costly
+###################################################################################
+Doubts:
+~A GPU have more cores than CPU. (core to price ratio). Can't we use it to process these 
+ datas as Cryptocurrency mining is done?

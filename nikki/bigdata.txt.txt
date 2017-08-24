@@ -1,0 +1,19 @@
+BIG DATA
+
+As the name suggest means large volume of data both structured or unstructured.
+Today,we hv been inundated with so many data.
+ 
+
+Why Is Big Data Important?
+
+data from any source and analyze it to find answers that enable
+ 1) cost reductions, 
+2) time reductions, 
+3) new product development and optimized offerings, and 
+4) smart decision making. 
+
+Aftr analysising huge data,we can accomplish business-related tasks such as:
+* Determining root causes of failures, issues and defects in near-real time.
+* Generating coupons at the point of sale based on the customer’s buying habits.
+* Recalculating entire risk portfolios in minutes.
+* Detecting fraudulent behavior before it affects your organization.

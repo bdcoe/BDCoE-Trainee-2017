@@ -1,0 +1,74 @@
+PIG
+**high level scripting language 
+**data flow language
+*developed by YAHOO in 2007.
+*Through UDF facility, Pig can invoke code in many languages 
+ like JRuby, Jython and Java.
+*Pig works with data from many sources, including structured
+ and unstructured data, and store the results into HDFS.
+
+*Pig scripts are translated into a series of MapReduce.
+
+FILES to perform a number of Pig operations including:
+*Define a relation with and without SCHEMA
+(a=LOAD 'home/nikki/ Desktop/pig.txt' using PigStorage(',');
+ describe a;)
+*Define a new relation from an EXISTING RELATION
+(b= FOREACH a GENERATE $1,$1*$2);
+*SELECT specific columns from within a relation
+*JOIN two relations
+*Sort the data using ‘ORDER BY’
+*FILTER and Group the data using ‘GROUP BY’
+
+MODES (pig can work with any mode)
+*local mode
+*HDFS mode
+
+DATATYPES
+int
+char array
+float
+long
+double
+byte array
+*atom
+*tuple
+*bag
+*map
+
+PIG VS MAPREDUCE
+ mapreduce
+ *programming language skills for writing the business logic.
+ *amount of code is very large,we hv to write huge code.
+ **compile and execute directly.
+*Writing and executing,programming is a bit complex task.
+
+pig
+*there is no need of much programming skills.
+*Amount of code is very less when cmprd to MapReduce prgrm.
+*Pig script internally converts into MapReduce program 
+and gets executed.so it will take more time in execution.
+*Writing and executing,programming is simple task.
+
+PIG VS SQL
+ sql
+   *there is need to define schema
+  *declarative scripting language
+  *we largely specify “what” is to be accomplished
+
+ pig 
+ *no need to define schema
+  *procedural scripting language
+  *we mention “how” a task is to be performed.
+  
+PIG IS MOSTLY UESD
+When we'r looking to process clusters of unorganized, unstructured, decentralized data.
+  
+           SQOOP
+  *fetch data from database
+ TOOLS
+import
+import-all-tables
+export
+eval (evaluate query from database)
+option-file

@@ -15,7 +15,7 @@ f = FILTER c BY $0>=5;==>> filtering c by checking its elements
 g= GROUP c BY $1;
 k = FOREACH c GENERATE$1 $1, $1*$2;==>>to generate a new data set with 2nd column multiplied by 1st column
 dump f;
-a = LOAD '/homr/ankit/Desktop/csvfile.txt';
+a = LOAD '/homr/bdcoe/Desktop/file.txt';
 b = FOREACH a GENERATE flatten (TOKENIZER((chaararray)$0)) as word;
 c = GROUP b BY word;
 d = FOREACH c GENERATE group,COUNT(b);

@@ -1,0 +1,29 @@
+Apache Kafka is a distributed publish-subscribe messaging system and a robust queue that can handle a 
+high volume of data and enables you to pass messages from one end-point to another. Kafka is suitable for 
+both offline and online message consumption. Kafka messages are persisted on the disk and replicated within
+the cluster to prevent data loss. Kafka is built on top of the ZooKeeper synchronization service. It 
+integrates very well with Apache Storm and Spark for real-time streaming data analysis.
+Following are a few benefits of Kafka −
+Reliability − Kafka is distributed, partitioned, replicated and fault tolerance.
+Scalability − Kafka messaging system scales easily without down time..
+Durability − Kafka uses Distributed commit log which means messages persists on disk as fast as possible, 
+hence it is durable.
+Performance − Kafka has high throughput for both publishing and subscribing messages.
+It maintains stable performance even many TB of messages are stored.
+Kafka is very fast and guarantees zero downtime and zero data loss.
+
+Brokers are system responsible for maintaining the published data. Each broker may have zero or more
+partitions per topic. Assume, if there are N partitions in a topic and N number of brokers, each broker 
+will have one partition.
+Producers are the publisher of messages to one or more Kafka topics. Producers send data to Kafka brokers.
+Consumers read data from brokers.
+
+/bin/kafka-topics.sh --create --zookeeper host_ID:port_no --partitions 3 --replication-factor 3 --topic NAme
+
+kafka-console-producer.sh --broker-list consumer_ID:port_no--topic NAme
+
+kafka-consumer-groups.sh --list --zookeeper consumer_ID:port_no
+
+kafka-consumer-groups.sh --describe --zookeeper consumer_ID:port_no
+
+kafka-console-producer.sh --broker-list host_ID:port_no --topic NAme

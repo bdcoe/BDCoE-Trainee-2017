@@ -1,0 +1,49 @@
+  Apache Maven
+
+  What is it?
+  -----------
+
+  Maven is a software project management and comprehension tool. Based on
+  the concept of a Project Object Model (POM), Maven can manage a project's
+  build, reporting and documentation from a central piece of information.
+
+
+
+ Installin Maven
+  ----------------
+
+  1) Unpck d archive
+
+ 
+    sudo tar zxvf apache-maven-3.x.y.tar.gz
+    
+  2) A directory called "apache-maven-3.x.y" will be created.
+
+  3) Add the bin directory to your PATH
+
+       export MAVEN_HOME=/usr/local/maven
+      
+       export PATH=$PATH:MAVEM_HOME/bin
+      
+
+  4) Make sure JAVA_HOME is set to the location of your JDK --- i m unable t understand this point 
+
+  5) mvn --version
+
+     it will be like this if evertthimg goes right
+
+Apache Maven 3.3.9
+Maven home: /usr/share/maven  "---i m having problem here /usr/local/maven -not usr/share/  
+maven"
+Java version: 1.8.0_144, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_IN, platform encoding: UTF-8
+OS name: "linux", version: "4.10.0-28-generic", arch: "amd64", family: "unix"
+
+     
+
+
+      
+
+
+

@@ -1,0 +1,25 @@
+currently working on kafka live twiiter streaming 
+
+prerequisites 
+
+installing zookeeper -done 
+
+installing kafka -done
+
+installing eclipse -done
+
+instaling apache maven -done
+
+creating twitter api - Consumer Key, Consumer Secret,      -done
+                       Acess token, Access Token secret 
+
+
+writting producer class in java -done
+
+writting consumer calss in java(eclipse) -done
+
+problems: a lots a error are there in both the classes 
+           
+          there is some path setting problem for maven and jdk
+
+          dont know how to create pom.xml

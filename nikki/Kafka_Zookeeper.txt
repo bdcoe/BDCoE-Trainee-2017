@@ -1,0 +1,56 @@
+KAFKA
+** an open-source stream processing platform
+**written in java and scala
+**connects to external systems (for data import/export)
+  
+It's Architecture
+PRODUCER:an applicationn that sends message to kafka. 
+TOPIC:each messages have some topic and topics are divided into partition.
+BROKER,PARTITION:to handle large volume and velocity of data, we need to create broker and partition of messages are received by BROKERS.
+CLUSTER:group of computer.
+OFFSET:unique id for a message witHin a partition.
+CONSUMER:an application that receives data from it.
+CONSUMER GROUP:a group of consumers acting as a single logical unit.
+
+NOW thr is need to create brokers and so kafka uses ZOOKEEPER.
+this is anthr opn source software
+it is uesd to provide co-ordination service for a distributed system.
+ since kafka is a distributed system we hv multiple broker,
+so we need a system to co-ordinate various things among these brokers tht is why we use zookeeper
+
+ 
+ IMPORTANT
+*if we want to create message,we hv to knw
+  --topic name
+  --partition number
+ --offset
+*kafka doesn't allow more than two consumer to read one partition simultaneously.
+ this restriction is necessary to avoid double reading of record.
+*increasing consumers in consumer group is rule for scalability.
+
+
+commands
+to create topic
+  bin/kafka-topics.sh  --create --zookeeper localhost:2181 --partitions 2 --replication factor 1 --topic topic
+
+to create console producer
+  bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic
+ 
+to create consumer group
+  bin/kafka-consumer-groups.sh --list --zookeeper localhost:2181
+  bin/kafka-consumer-groups.sh --discribe --zookeeper localhost:2181
+
+to create console consumer 
+  bin/kafka-console-consumer.sh --zookeeper localhost:9092 --topic topic --from beginning
+
+FAULT TOLERANCE:
+enabling system to continue opertating property in the event of the failure of some of its components.
+so replication factor(RF) term come into role.
+ by default RF=1
+ to increase Rf=2
+we hv to do chng in 
+  config/server-1.properties
+thn
+# broker id =1
+#listeners = PLAINTEXT://:2182
+# log.dir=/tmp/kafka-logs

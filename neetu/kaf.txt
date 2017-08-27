@@ -1,0 +1,22 @@
+Apache Kafka is a distributed publish-subscribe messaging system and a robust queue that can handle a high volume of data and enables you to pass messages from one end-point to another.
+A Messaging System is responsible for transferring data from one application to another, so the applications can focus on data, but not worry about how to share it.Two types of messaging patterns are available – one is point to point and the other is publish-subscribe (pub-sub) messaging system. Most of the messaging patterns follow pub-sub.
+Following are a few benefits of Kafka:
+1.Reliability - Kafka is distributed, partitioned, replicated and fault tolerance.
+2.Scalability - Kafka messaging system scales easily without down time.
+3.Durability - Kafka uses “Distributed commit log” which means messages persists on disk as fast as possible, hence it is durable.
+4.Performance - Kafka has high throughput for both publishing and subscribing messages. It maintains stable performance even many TB of messages are stored.
+Kafka is very fast and guarantees zero downtime and zero data loss.
+Topics-A stream of messages belonging to a particular category is called a topic. Data is stored in topics.Topics are split into partitions.
+Partition-For each topic, Kafka keeps a mini-mum of one partition. Each such partition contains messages in an immutable ordered sequence. A partition is implemented as a set of segment files of equal sizes. Topics may have many partitions
+Partition offset-Each partitioned message has a unique sequence id called as “offset”.
+Brokers-Brokers are simple system responsible for maintaining the pub-lished data. Each broker may have zero or more partitions per topic.
+Producers-Producers are the publisher of messages to one or more Kafka topics.Every time a producer pub-lishes a message to a broker, the broker simply appends the message to the last segment file.
+Consumers-Consumers read data from brokers and consume published messages by pulling data from the brokers.
+Leader-Leader is the node responsible for all reads and writes for the given partition.
+ZooKeeper-ZooKeeper is used for managing and coordinating Kafka broker. ZooKeeper service is mainly used to notify producer and consumer about the presence of any new broker in the Kafka system or failure of the broker in the Kafka system.
+Creating a Kafka Topic:bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic topic-name
+To get a list of topics in Kafka:bin/kafka-topics.sh --list --zookeeper localhost:2181
+Start producer to send message:bin/kafka-console-producer.sh --broker-list localhost:9092 localhost:9093 --topic topic-name
+Start consumer to recieve message:bin/kafka-console-consumer.sh --zookeeper localhost:2181 —topic topic-name --from-beginning
+
+

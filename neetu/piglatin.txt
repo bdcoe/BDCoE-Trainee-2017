@@ -1,0 +1,16 @@
+The language used to analyze data in Hadoop using Pig is known as Pig Latin.It convert simple query into mapreduce code.
+lazy evaluation-evaluation strategy delays the evaluation of an expression,until its value is needed and which also avoids repeated evaluations.
+Pipeline-pipeline consists of chain processing elements(process,threads,functions etc)arranged so that the output of each element is the input of the next.The info that flows in pipeline is often stream of records,bytes or bits,the element of a pipeline may be called filters.
+sqoop is a tool designed for efficiently transfering bulk data between Hadoop and structured data.
+Architectre of PIG:
+1.PARSER- initially pig scripts are handled by the parser.It checks the syntax of the script,does type checking and other miscellaneouschecks.Output will be a DAG(directed acyclic graph),represent piglatin statement and logic operators.
+2-OPTIMIZERS-DAG is passed to logical optimizer which carries out the logical optimization such as projection and push down.
+3-COMPILER-compiles the optimized logical plan into a series of MapReduce jobs.
+4-EXECUTION ENGINE-Now MapReduce jobs are submitted to Hadoop in sorted order.Finally these jobs are executed on Hadoop producing desired result.
+Piglatin model consits of:
+1. ATOM-Any single value in Pig Latin, irrespective of their data, type is known as an Atom.A piece of data or a simple atomic value is known as a field.
+2. TUPLE-A record that is formed by an ordered set of fields is known as a tuple, the fields can be of any type.
+3. BAG-A bag is an unordered set of tuples. In other words, a collection of tuples (non-unique) is known as a bag.A bag is represented by ‘{}’.
+4. MAP-A map (or data map) is a set of key-value pairs. The key needs to be of type chararray and should be unique. The value might be of any type. It is represented by ‘[]’.
+Grunt shell of Apache Pig is mainly used to write Pig Latin scripts. Prior to that, we can invoke any shell commands using sh and fs.
+ 

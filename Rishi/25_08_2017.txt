@@ -1,0 +1,46 @@
+#################################################################################
+PIG
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+High Level Data Flow Language
+Created by Yahoo
+Just like sQL
+Written in Pig Latin
+then converted to MapReduce code
+Lazy evaluation
+can work on Structured, semistructured, unstructured data
+Operators :
+-Join
+-sort
+-Filter
+-Order
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pig vs MapReduce
+-High Level language---JAVA
+-Easy to understand and write code...
+-Pig is slower, because of conversion of pig latin into MP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pig Architecture
+-Grunt Shell
+-Parser-look for errors
+-Optimizer
+-Compiler-Translate the code and compile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Modes
+-Local system
+ ./pig -x local
+-MapReduce 
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data Types
+-Atom
+ int, float....
+-Tuples
+ (1,Name,Address)
+-Bag
+ {(1,Ajay,Delhi),(2,Sanjay,Delhi)}
+-Map
+ [Sno#1 Name#Ajay Address#Delhi]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+

@@ -1,0 +1,127 @@
+Pig helps professionals who are working on Hadoop and would like to perform MapReduce operations using a 
+high-level scripting language instead of developing complex codes in Java. Pig is a high level data flow language 
+used for writing queires.
+Pig was developed by Yahoo in 2007.
+Apache Pig provides a high-level language known as Pig Latin which helps Hadoop developers to write data 
+analysis programs. By using various operators provided by Pig Latin language programmers can develop their own 
+functions for reading, writing, and processing data. Internally all these scripts are converted to Map and 
+Reduce tasks. A component known as Pig Engine is present inside Apache Pig in which Pig Latin scripts are taken 
+as input and these scripts gets converted into Map-Reduce jobs.
+
+Apache Pig reduces the length of codes by using multi-query approach. For example: to perform an operation we 
+need to write 200 lines of code in Java then we can easily perform that operation just by typing less than 10 
+lines of code in Apache Pig. Hence ultimately our almost 16 times development time gets reduced using Apache Pig.
+If developers have knowledge of SQL language, then it is very easy to learn Pig Latin language as it is similar 
+to SQL language. Many built-in operators are provided by Apache Pig to support data operations like filters, 
+joins, ordering, etc. In addition, nested data types like tuples, bags, and maps which are not present in 
+MapReduce are also provided by Pig.
+
+-->Features of Pig
+--Rich Set of Operators: Pig consists of a collection of a Rich set of operators in order to perform operations 
+such as join, filer, sort and many more.
+--Ease of Programming: Pig Latin is similar to SQL and hence it becomes very easy for developers to write a 
+Pig script. If you have knowledge of SQL language, then it is very easy to learn Pig Latin language as it is 
+similar to SQL language.
+--Optimization opportunities: The execution of the task in Apache Pig gets automatically optimized by the task 
+itself, hence the programmers need to only focus on the semantics of the language.
+--Extensibility: By using the existing operators, users can easily develop their own functions to read, process, 
+and write data.
+--User Define Functions (UDF’s): With the help of facility provided by Pig of creating UDF’s, we can easily 
+create User Defined Functions on a number of programming languages such as Java and invoke or embed them in Pig 
+Scripts.
+--All types of data handling: Analysis of all types of Data (i.e. both structured as well as unstructured) is 
+provided by Apache Pig and the results are stored inside HDFS.
+
+Commands in Pig is written in Piglatin language i.e. Procedural language(It contains a systematic order of 
+statements, functions and commands to complete a computational task or program.)
+Commands in SQL is written in declarative language(that expresses the logic of a computation without describing 
+its control flow.)
+
+-->Advantages over Map reduce
+--Decrease in development time. This is the biggest advantage especially considering large map-reduce jobs' 
+complexity, time-spent and maintenance of the programs.
+--Procedural, not declarative unlike SQL, so easier to follow the commands and provides better expressiveness in 
+the transformation of data every step. Comparing to vanilla map-reduce, it is much more like an english language. 
+It is concise and unlike Java but more like Python.
+--Since it is procedural, you could control execution of every step. If you want to write your own UDF(User 
+Defined Function) and inject in one specific part in the pipeline, it is straightforward.
+--It is quite effective for unstructured and messy large datasets. Actually, Pig is one of the best tool to make 
+the large unstructured data to structured.
+--Lazy evaluation: unless you do not produce an output file or does not output any message, it does not get 
+evaluated. This has an advantage in the logical plan, it could optimize the program beginning to end and 
+optimizer could produce an efficient plan to execute.
+
+-->Disadvantages
+--The commands are not executed unless either you dump or store an intermediate or final result. This increases 
+the iteration between debug and resolving the issue.
+--Support: Stackoverflow and Google generally does not lead good solutions for the problems.
+--Especially the errors that Pig produces due to UDFS(Python) are not helpful at all. When something goes wrong, 
+it just gives exec error in udf even if problem is related to syntax or type error, let alone a logical one.
+
+-->Apache Pig Components
+--Grunt Shell -- It forms the interface for the user.
+--Parser -- Initially the Pig Scripts are handled by the Parser. It checks the syntax of the script, does type 
+checking, and other miscellaneous checks. The output of the parser will be a DAG (directed acyclic graph), which 
+represents the Pig Latin statements and logical operators. In the DAG, the logical operators of the script are 
+represented as the nodes and the data flows are represented as edges.
+--Optimizer -- The logical plan (DAG) is passed to the logical optimizer, which carries out the logical 
+optimizations such as projection and pushdown.
+--Compiler -- The compiler compiles the optimized logical plan into a series of MapReduce jobs.
+--Execution engine -- Finally the MapReduce jobs are submitted to Hadoop in a sorted order. Finally, these 
+MapReduce jobs are executed on Hadoop producing the desired results.
+
+-->Data Types in Pig
+--Atom -- Any single value in Pig Latin, irrespective of their data, type is known as an Atom. 
+It is stored as string and can be used as string and number. int, long, float, double, chararray, and bytearray 
+are the atomic values of Pig. A piece of data or a simple atomic value is known as a field.
+Example - ‘raja’ or ‘30’
+--Tuple -- A record that is formed by an ordered set of fields is known as a tuple, the fields can be of any type.
+A tuple is similar to a row in a table of RDBMS.
+Example - (Raja, 30)
+--Bag -- A bag is an unordered set of tuples. In other words, a collection of tuples (non-unique) is known as a 
+bag. Each tuple can have any number of fields (flexible schema). A bag is represented by ‘{}’. It is similar to 
+a table in RDBMS, but unlike a table in RDBMS, it is not necessary that every tuple contain the same number of 
+fields or that the fields in the same position (column) have the same type.
+Example - {(Raja, 30), (Mohammad, 45)}
+--Map -- A map (or data map) is a set of key-value pairs. The key needs to be of type chararray and should be 
+unique. The value might be of any type. It is represented by ‘[]’
+Example - [name#Raja, age#30]
+
+-->Apache Pig Execution Modes
+--Local Mode -- In this mode, all the files are installed and run from your local host and local file system. 
+There is no need of Hadoop or HDFS. This mode is generally used for testing purpose.
+--MapReduce Mode -- MapReduce mode is where we load or process the data that exists in the Hadoop File System 
+(HDFS) using Apache Pig. In this mode, whenever we execute the Pig Latin statements to process the data, a 
+MapReduce job is invoked in the back-end to perform a particular operation on the data that exists in the HDFS.
+
+-->Apache Pig Execution Mechanisms
+--Interactive Mode (Grunt shell) - You can run Apache Pig in interactive mode using the Grunt shell. In this 
+shell, you can enter the Pig Latin statements and get the output (using Dump operator).
+--Batch Mode (Script) - You can run Apache Pig in Batch mode by writing the Pig Latin script in a single file 
+with .pig extension.
+--Embedded Mode (UDF) - Apache Pig provides the provision of defining our own functions (User Defined Functions) 
+in programming languages such as Java, and using them in our script.
+
+-->Invoking the Grunt Shell
+(In local mode)Command -
+$ ./pig –x local
+(In MapReduce mode)Command -
+$ ./pig -x mapreduce
+
+-->Executing Apache Pig in Batch Mode
+Let us suppose we have a Pig script in a file named sample_script.pig 
+(In local mode)$ pig -x local Sample_script.pig
+(In MapReduce mode)$ pig -x mapreduce Sample_script.pig
+
+-->Sqoop
+Sqoop is a tool designed to transfer data between Hadoop and relational database servers. It is used to import 
+data from relational databases such as MySQL, Oracle to Hadoop HDFS, and export from Hadoop file system to 
+relational databases.
+Sqoop Import
+The import tool imports individual tables from RDBMS to HDFS. Each row in a table is treated as a record in HDFS.
+All records are stored as text data in text files or as binary data in Avro and Sequence files.
+
+Sqoop Export
+The export tool exports a set of files from HDFS back to an RDBMS. The files given as input to Sqoop contain 
+records, which are called as rows in table. Those are read and parsed into a set of records and delimited with 
+user-specified delimiter.

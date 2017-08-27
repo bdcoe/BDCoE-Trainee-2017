@@ -1,0 +1,118 @@
+Spark is 100 times faster than Bigdata Hadoop and 10 times faster than accessing data from disk.
+
+--Need for Spark
+In the industry, there is a need for general purpose cluster computing tool as:
+•	Hadoop MapReduce can only perform batch processing.
+•	Apache Storm / S4 can only perform stream processing.
+•	Apache Impala / Apache Tez can only perform interactive processing
+•	Neo4j / Apache Giraph can only perform to graph processing
+Apache Spark is a powerful open source engine that provides real-time stream processing, interactive processing, 
+graph processing, in-memory processing as well as batch processing with very fast speed, ease of use and 
+standard interface. 
+
+--Apache Spark Components
+-->Spark SQL -- It enables users to run SQL / HQL queries on the top of Spark. Using Apache Spark SQL, we 
+can process structured as well as semi-structured data. It also provides an engine for Hive to run unmodified 
+queries up to 100 times faster on existing deployments.
+-->Spark Streaming -- Apache Spark Streaming enables powerful interactive and data analytics application across 
+live streaming data. 
+-->Spark MLlib -- For Machine Learning. Apache Spark MLlib is one of the hottest choices for Data Scientist due 
+to its capability of in-memory data processing, which improves the performance of iterative algorithm drastically.
+-->Spark GraphX -- Apache Spark GraphX is the graph computation engine built on top of spark that enables to 
+process graph data at scale.
+-->SparkR -- It is R package that gives light-weight frontend to use Apache Spark from R. It allows data 
+scientists to analyze large datasets and interactively run jobs on them from the R shell.
+
+Spark supports Interactive Query. Pig and Hive take data from the memory of the system again and again for 
+processing. Spark keep those data in the RAM which saves time and hence is better. Spark can run alone on a system as well as on Hadoop.
+
+Spark supports 4 languages--
+--Scala(most preferred and present in Spark library)
+--Python(present in Spark library)
+--R(present in Spark library)
+--Java(used very less)
+
+--Spark Framework(4 layers)
+-->Proramming(supports 4 languages-Scala,Python,R,java)
+-->Library(has extensions with same API to make the user comfortable in using-Spark SQL, BlinkDB, Streaming, 
+	   MLlib, GraphX, Spark R)
+-->Management(Spark uses Hadoop Yarn for management)
+-->Storage(uses HDFS for storage as Spark does not have any original storage unit. it is mainly used for 
+           processing.)
+
+--Modes of Spark
+-->Batch mode
+-->Iterative mode
+-->Interactive mode
+-->Streaming mode
+
+--Resilient Distributed Dataset(RDD)
+ RDD in Apache Spark is an immutable collection of objects which computes on the different node of the cluster.
+-->Resilient, i.e. fault-tolerant with the help of RDD lineage graph(DAG) and so able to recompute missing or 
+damaged partitions due to node failures.
+-->Distributed, since Data resides on multiple nodes.
+-->Dataset represents records of the data you work with. 
+Role of RDD in Spark
+-->Iterative algorithms.
+-->Interactive data mining tools.
+-->DSM(Distributed Shared Memory)
+
+Apache Spark evaluates RDDs lazily. It is called when needed which saves lots of time and improves efficiency. 
+The first time they are used in an action so that it can pipeline the transformation. Also, the programmer can 
+call a persist method to state which RDD they want to use in future operations.
+
+--Features of RDD in Spark
+-->In-memory computation(Caching) -- Spark RDDs have a provision of in-memory computation. It stores intermediate results 
+in distributed memory(RAM) instead of stable storage(disk).
+-->Lazy evaluations -- All transformations in Apache Spark are lazy, in that they do not compute their results 
+right away. Instead, they just remember the transformations applied to some base dataset. Spark computes 
+transformations when an action requires a result for the driver program.
+--> Fault Tolerance -- Spark RDDs are fault tolerant as they track data lineage information to rebuild lost data
+ automatically on failure. They rebuild lost data on failure using lineage, each RDD remembers how it was created
+ from other datasets (by transformations like a map, join or groupBy) to recreate itself.
+-->Immutability -- it means once created it will never change. 
+-->Type Inference -- Type inference refers to the automatic deduction of the data type of an expression in a 
+programming language. The ability to infer types automatically makes many programming tasks easier, leaving the 
+programmer free to omit type annotations while still permitting type checking.
+-->Coarse-grained operations -- It applies to all elements in datasets through maps or filter or group by 
+operation.
+
+RDD in Apache Spark supports two types of operations:
+-->Transformation
+-->Actions
+1.Transformations
+Spark RDD Transformations are functions that take an RDD as the input and produce one or many RDDs as the output. 
+They do not change the input RDD (since RDDs are immutable and hence one cannot change it), but always produce 
+one or more new RDDs by applying the computations they represent e.g. Map, filter, reduceByKey etc. 
+Transformations are lazy operations on an RDD in Apache Spark. It creates one or many new RDDs, which executes 
+when an Action occurs. Transformation creates a new dataset from an existing one.
+2.Actions
+Action in Spark returns final result of RDD computations. It triggers execution using lineage graph to load the
+data into original RDD, carry out all intermediate transformations and return final results to Driver program 
+write it out to file system. Lineage graph is dependency graph of all parallel RDDs of RDD. Using transformations,
+ one can create RDD from the existing one. But when we want to work with the actual dataset, at that point we use 
+Action. When the Action occurs it does not create the new RDD, unlike transformation. Thus, actions are RDD 
+operations that give no RDD values. Action stores its value either to drivers or to the external storage system. 
+It brings laziness of RDD into motion.
+
+--How is Spark Fast?
+-->Catalyst Optimizer Spark -- optimizes the steps and analyzes the problem.
+-->Results are stored in RAM, back ups are in RAM so time required in I/O is saved.
+-->Dag Scheduler -- DAGScheduler is the scheduling layer of Apache Spark that implements stage-oriented 
+scheduling. It transforms a logical execution plan (i.e. RDD lineage of dependencies built using RDD 
+transformations) to a physical execution plan (using stages). After an action has been called, SparkContext hands 
+over a logical plan to DAGScheduler that it in turn translates to a set of stages that are submitted as TaskSets 
+for execution (see Execution Model). DAGScheduler does three things in Spark (thorough explanations follow):
+Computes an execution DAG, i.e. DAG of stages, for a job.
+Determines the preferred locations to run each task on.
+Handles failures due to shuffle output files being lost.
+DAGScheduler computes a directed acyclic graph (DAG) of stages for each job, keeps track of which RDDs and 
+stage outputs are materialized, and finds a minimal schedule to run jobs. It then submits stages to 
+TaskScheduler. DAGScheduler tracks which RDDs are cached (or persisted) to avoid "recomputing" them, i.e. 
+redoing the map side of a shuffle. DAGScheduler remembers what ShuffleMapStages have already produced output 
+files (that are stored in BlockManagers).
+
+
+
+Question-- Couldn't understand Types of Transformation in RDD(Narrow and Wide).
+Question-- Proper explaination of DAG scheduler.

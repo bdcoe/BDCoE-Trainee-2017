@@ -1,0 +1,23 @@
+what is bigData?
+Big data is a term for data sets that are so large or complex that traditional data processing application software is inadequate to deal with them. Big data challenges include capturing data, data storage, data analysis, search, sharing, transfer, visualization, querying, updating and information privacy.Relational database management systems and desktop statistics- and visualization-packages often have difficulty handling big data. The work may require "massively parallel software running on tens, hundreds, or even thousands of servers".
+volume
+variety
+velocity
+verasity
+variability
+volatility
+validity etc...
+
+.tar.gz--bundle of files packed with tar compressed with gzip.
+dfs- distributed file system
+hdfs- block size default- 128MP that can be changed.
+
+new learnt ---
+Intent data are data collected about a web user and possibly indicating some intent or future action. The future action may be an online action - order a product on an e-retail site - or offline - house moving or a travel for instance.
+
+An intent data may be: 
+- a particular page visit 
+- a tool usage (simulator, configurator, store locator) 
+- a search query 
+
+doubt- horizontal and vertical scaling?

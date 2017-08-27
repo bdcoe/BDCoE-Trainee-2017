@@ -1,0 +1,30 @@
+Apache Pig[1] is a high-level platform for creating programs that runs on Apache Hadoop. The language for this platform is called Pig Latin.
+Pig Latin can be extended using user-defined functions (UDFs) which the user can write in Java, Python, JavaScript, Ruby or Groovy[2] and then call directly from the language.
+
+In comparison to SQL, Pig---
+uses lazy evaluation,
+uses extract, transform, load (ETL),
+is able to store data at any point during a pipeline,
+declares execution plans,
+supports pipeline splits, thus allowing workflows to proceed along DAGs instead of strictly sequential pipelines.
+Pig Latin's ability to include user code at any point in the pipeline is useful for pipeline development. If SQL is used, data must first be imported into the database, and then the cleansing and transformation process can begin.Pig Latin is procedural and fits very naturally in the pipeline paradigm while SQL is instead declarative.
+
+
+The most extensive support is provided for Java functions. You can customize all parts of the processing including data load/store, column transformation, and aggregation. Java functions are also more efficient because they are implemented in the same language as Pig and because additional interfaces are supported such as the Algebraic Interface.
+
+
+A scripting platform for processing and analyzing large data sets
+
+With YARN as the architectural center of ApacheTM Hadoop, multiple data access engines such as Apache Pig interact with data stored in the cluster. Apache Pig allows Apache Hadoop users to write complex MapReduce transformations using a simple scripting language called Pig Latin. Pig translates the Pig Latin script into MapReduce so that it can be executed within YARN for access to a single dataset stored in the Hadoop Distributed File System (HDFS).
+
+WHAT PIG DOES
+Pig was designed for performing a long series of data operations, making it ideal for three categories of Big Data jobs:
+
+Extract-transform-load (ETL) data pipelines,
+Research on raw data, and
+Iterative data processing.
+
+CHARACTERSTICS OF PIG-
+*ExtensiblE----Pig users can create custom functions to meet their particular processing requirements
+*Easily programmed-----Complex tasks involving interrelated data transformations can be simplified and encoded as data flow sequences.Pig programs accomplish huge tasks, but they are easy to write and maintain.
+*Self-optimizing----Because the system automatically optimizes execution of Pig jobs, the user can focus on semantics.

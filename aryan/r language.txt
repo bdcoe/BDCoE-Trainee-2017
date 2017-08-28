@@ -1,0 +1,45 @@
+R is a programming language and software environment for statistical analysis, graphics representation and reporting.
+There are many types of R-objects. The frequently used ones are -
+
+Vectors
+Lists
+Matrices
+Arrays
+Factors
+Data Frames
+
+
+The function mean() is used to calculate this in R
+
+The middle most value in a data series= median.Median() fn is used in R to cal this value.
+The mode is the value that has highest no. of occurrences in a set of data. Unike mean and median, mode can have both numeric and character data.
+
+R doesn't hv in-built fn to calculate mode. u can create one.
+(using max fn)
+
+sum fn for sum.
+
+max fn for getting maximum value.
+
+min fn for getting min value.
+
+colSum to check where is missing value
+
+str-nature and type of data
+
+dim shows rows and column 
+
+str info of data set
+
+ggplot for plotting graphs
+
+table(is.na()) for missing values
+categorical variables=discete value 
+continuous variables=values in a rythm
+
+1 step : load data 
+2 step : decide predictor and  response variable variable
+3 step : analyse data and find missing values
+4 step : fill the missing calues and do more data cleaning
+
+to be continued....

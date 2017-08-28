@@ -1,0 +1,37 @@
+            HDFS COMMANDS
+
+1.hdfs dfs -ls --> list all the files
+2.hdfs dfs -put (filename) --> to move the file at some place
+3.hdfs dfs -cat --> to see the file content
+4.hdfs dfs -help --> to see all the commands
+5.hadoop versions or hdfs dfs versions --> to see the version of hadoop
+6.hdfs dfs -mkdir (directoryname)--> to make a directory
+7.hdfs balancer --> to run the balancer
+8.nano (filename)--> to make or open a file in text editor
+
+
+
+9. hdfs dfs -rm (filename) --> to remove file
+10.hdfs dfs -rm -r (filename)--> to remove the directory
+11.hdfs dfs -cp (filename)-->to copy the file
+12.hdfs dfs -ls (foldername) --> to see the content of folder
+13.hdfs dfs -mv (filename) place --> to move the file to some place
+
+
+   SOME OTHER HDFS COMMANDS
+hdfs dfs -get (filename) 
+hdfs dfs -tail hello
+
+14.hdfs dfs -setrep -w 2 try /hello --> to change replication factor
+15.hdfs dfs -expunge --> to clear the hdfs trash
+16.hdfs dfs --> to see all the commands used
+17.hdfs dfs admin -report --> to know how the cluster is running 
+18.hdfs dfs admin -safemode leave --> to leave the safemode
+19.hdfs dfs admin --safemode enter --> to enter the safemode
+
+
+       SOME COMMANDS LEARNED BY ME
+
+hadoop jar hadoop-mapreduce-examples-2.7.3 --> to see the functions which can be performed in this
+hadoop jar hadoop-mapreduce-examples-2.7.3 wordcount (filename) (file where u want to see the wordcout)
+

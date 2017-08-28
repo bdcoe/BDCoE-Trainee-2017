@@ -1,0 +1,38 @@
+CLOUD COMPUTING
+**basically,it refers to portable storage which we don't hv to carry accessible through internet.
+or
+the practice of using a network of remote servers hosted on the internet to store, manage and 
+process data rather than a local server or personal computer.
+**it enable us to utilize high end resources so we built great application without worry abt tne infrastructure.
+ 
+we need it because
+*if we need huge amount of process power.
+*whn we wnt to manage tools for our application.
+*our users are not from same geographic location.
+ 
+BENEFITS
+*no hardware management headache.
+*you can access and manage your application frm anywher in the world.
+*power of customisation
+  ~~high scaling ability
+ ~~high amount of services are available under one roof
+
+FUNDAMENTAL PART(cloud computing stack)
+*Saas(software as a service): when we access a particular software over internet,
+we are just taking advantage of software as a service.
+so thr is no need to download google apps we can access online.
+
+**Paas(platform as a service):utilzing platform to run our applications.
+we don't hv to worry abt maintaining platform detail,we only need to manage our application.
+
+**Iaas(infrastructure as a service): whn we need certain type of infrastructure, we don't need to buy it by ourselves,
+we can ask various IAAS cloud providers to provide certein type of infrastructure.
+
+
+CLOUD PROVIDERS
+**ASW(amazon web services)
+**MICROSOFT AZURE
+**ORACLE(database) cloud computing
+**Google cloud platform
+**IBM cloud computing
+etc. 

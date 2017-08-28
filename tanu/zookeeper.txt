@@ -1,0 +1,106 @@
+
+
+
+                                                                        ZOOKEEPER
+
+
+# ZooKeeper is a distributed co-ordination service to manage large set of hosts.
+
+# Co-ordinating and managing a service in a distributed environment is a complicated process.ZooKeeper solves this issue with its simple architecture and API.
+
+# ZooKeeper allows developers to focus on core application logic without worrying about the distributed nature of the application.
+
+# The ZooKeeper framework was originally built at Yahoo for accessing their applications in an easy and robust manner.
+
+ Later, Apache ZooKeeper became a standard for organized service used by Hadoop, HBase, and other distributed frameworks.
+
+ For example, Apache HBase uses ZooKeeper to track the status of distributed data.
+
+
+@@ DISTRIBUTED APPLICATION----------
+
+
+
+A group of systems in which a distributed application is running is called a Cluster and each machine running in a cluster is called a Node.
+
+A distributed application has two parts, Server and Client application.
+
+ * Server applications are actually distributed and have a common interface so that clients can connect to any server in the cluster and get the same result.
+
+ * Client applications are the tools to interact with a distributed application.
+
+@@ BENIFITS-------------------
+
+
+
+    * Reliability - Failure of a single or a few systems does not make the whole system to fail.
+
+    * Scalability - Performance can be increased as and when needed by adding more machines with minor change in the configuration of the application with no downtime.
+
+    * Transparency - Hides the complexity of the system and shows itself as a single entity / application.
+
+
+QUES. WHAT IS APACHE ZOOKEEPER MEANT FOR??
+
+ANS. Apache ZooKeeper is a service used by a cluster to coordinate between themselves and maintain shared data .
+
+ ZooKeeper is itself a distributed application providing services for writing a distributed application.
+
+
+
+@@ COMMON SERVICES PROVIDED BY ZOOKEEPER------------
+
+
+ * Naming service - Identifying the nodes in a cluster by name. 
+
+ * Configuration management - Latest and up-to-date configuration information of the system for a joining node.
+
+ * Cluster management - Joining / leaving of a node in a cluster and node status at real time.
+
+ * Leader election - Electing a node as leader for coordination purpose.
+
+ *  Locking and synchronization service - Locking the data while modifying it.  
+
+ *  Highly reliable data registry - Availability of data even when one or a few nodes are down.
+
+
+
+@@ BENIFITS OF ZOOKEEPER-------------
+
+
+
+
+
+    * Simple distributed coordination process
+
+    * Synchronization 
+
+    * Ordered Messages
+
+    * Serialization
+
+    * Reliability
+
+    * Atomicity 
+
+
+@@ APLLICATIONS OF ZOOKEEPER-----------------
+
+
+
+
+* YAHOO------:          YAHOO  needs to meet requirements such as data transparency, better performance, robustness, centralized configuration, and coordination.
+
+                         So, they designed the ZooKeeper framework to meet these requirements.
+
+* APACHE HADOOP------:  Hadoop relies on ZooKeeper for configuration management and coordination.
+
+
+* APACHE HBASE-------:  Apache HBase uses ZooKeeper to track the status of distributed data throughout the master and region servers with the help of centralized configuration management .
+
+
+* APACHE SOLR----:      it is a fast, open source search platform written in Java.
+
+                        Solr extensively uses every feature of ZooKeeper such as Configuration management, Leader election, node management, Locking and syncronization of data.
+
+

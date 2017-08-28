@@ -1,0 +1,32 @@
+pig-
+Pig programs can run on MapReduce v1 or MapReduce v2 without any code changes, regardless of what mode your cluster is running. However, Pig scripts can also run using the Tez API instead. Apache Tez provides a more efficient execution framework than MapReduce. YARN enables application frameworks other than MapReduce (like Tez) to run on Hadoop. Hive can also run against the Tez framework.
+
+The language itself: As proof that programmers have a sense of humor, the programming language for Pig is known as Pig Latin, a high-level language that allows you to write data processing and analysis programs.
+
+The Pig Latin compiler: The Pig Latin compiler converts the Pig Latin code into executable code. The executable code is either in the form of MapReduce jobs or it can spawn a process where a virtual Hadoop instance is created to run the Pig code on a single node.
+
+MAP REDUCE----
+The MapReduce algorithm contains two important tasks, namely Map and Reduce. Map takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (key/value pairs). Secondly, reduce task, which takes the output from a map as an input and combines those data tuples into a smaller set of tuples. As the sequence of the name MapReduce implies, the reduce task is always performed after the map job.
+PayLoad - Applications implement the Map and the Reduce functions, and form the core of the job.
+
+Mapper - Mapper maps the input key/value pairs to a set of intermediate key/value pair.
+
+NamedNode - Node that manages the Hadoop Distributed File System (HDFS).
+
+DataNode - Node where data is presented in advance before any processing takes place.
+
+MasterNode - Node where JobTracker runs and which accepts job requests from clients.
+
+SlaveNode - Node where Map and Reduce program runs.
+
+JobTracker - Schedules jobs and tracks the assign jobs to Task tracker.
+
+Task Tracker - Tracks the task and reports status to JobTracker.
+
+Job - A program is an execution of a Mapper and Reducer across a dataset.
+
+Task - An execution of a Mapper or a Reducer on a slice of data.
+
+Task Attempt - A particular instance of an attempt to execute a task on a SlaveNode.
+
+The MapReduce framework operates on <key, value> pairs, that is, the framework views the input to the job as a set of <key, value> pairs and produces a set of <key, value> pairs as the output of the job, conceivably of different types.

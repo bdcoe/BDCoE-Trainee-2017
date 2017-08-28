@@ -1,0 +1,58 @@
+                  PIG
+
+1. an open source high level dataflow system.
+2.introduced by yahoo.
+3. two main components-- pig latin an dpig execution
+
+# advantage of pig over mapreduce:)
+  1.the code for any program in mapreduce is 20 times the code written in  pig.
+  2.the time taken by mapreduce is 16 times theb pig.
+-->no need to write any cmplex program.
+-->built in support fo data operations like jon, filter, ordering, group,sorting etc.
+-->provides data  types like tuples, atoms ,bags and map.
+-->languages support -- java , python, javascript, ruby.
+
+
+         TWITTER CASE STUDY
+
+to solve the problem of mapreduce twitter started using pig
+
+1.twittr uses sqoop to transfer data from RDBMS to HDFS	. uses sqoop because it can b used over hodoop clusters.
+2.from the hdfs the data is sent to apache pig where they are joined and grouped together.
+3.on the basis of grouping they get unique id .on id basis the tweets can be grouped.
+4.teh final grouped tweets are counted to know the number of tweets posted.
+5.the result is finally sent to the hdfs again.
+
+
+   architecture 
+
+GRUNT SHELL--> PARSER --> OPTIMIZER -->COMPILER(converts pig latin query into mapreduce code) --> EXECUTION ENGINE
+
+
+      PIG RUNNING MODES
+
+1.mapreduce mode-default mode.command used to run -->pig
+2.local mode-the input output in this mmode is present on the local file system.command used to run-->pig -x local
+
+
+   DATA MODELS
+
+1.tuple-->ordered set of fields 
+2.bag-->collection of tuples and subsets of row or entire set of rows.
+4.map-->set of key value pairs
+5.atoms--> basic data types like int,float,char etc.
+
+    PIG OPERATORS
+
+1.LOAD
+2.FOREACH
+3.GROUP
+4.COGROUP 
+5.FILTER
+6.JOIN
+7.ORDER BY
+8.STORE
+9.DISTINCT
+
+
+

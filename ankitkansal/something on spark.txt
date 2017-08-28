@@ -1,0 +1,80 @@
+hadoop supports storage via hdfs and processes via mapreduce.
+spark is only for procrsses.
+spark is replacement of mapreduce
+spark was needed for large amt of unstructured data.
+for storage,  spark can use hdfs or any other storage.
+Spark is nearly 10 to 100 times faster than hadoop.
+it loads all data to ram during processing.
+Spark supports 4 languages : 
+scala
+python 
+r
+java
+
+libraries of spark :
+spark SQL
+Blink DB
+Streaming
+MLLib
+Spark R
+
+Spark has its own management layer(Spark Standalone) like Yarn.
+
+why Spark superceeded Spark
+
+near to live processing
+iterative computing
+interactive query
+faster
+all in one(libraries)
+easy and smaller codes
+compatibility
+smarter memory usage(LRU(least recently used))
+
+Modes of Spark::
+iterative
+batch  
+interactive
+streaming
+
+fault tolerant
+
+RDD(resilient distributrd database)
+immutable
+lazy evaluation
+caching
+type interference
+
+
+directed acyclic graph makes it faster.
+
+catalyst optimiser
+
+rdd-> transformation----------> rdd
+
+Spark is near to real processing
+fling is real processing
+
+
+Master-- driver and spark context
+cluster manager
+worker -- executer , task and cache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3

@@ -1,0 +1,5 @@
+what i the meaning of this staement
+ char* s = (char *)malloc(512000 * sizeof(char));
+does it means char s[512000]?
+and sir how we can use this to array to assign numbers??
+ 

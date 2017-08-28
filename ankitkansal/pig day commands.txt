@@ -1,0 +1,44 @@
+tar -xvf pig-0.15.0.tar.gz 
+sudo mv pig /usr/local/
+cd /usr/local/pig/
+cd bin
+./pig -x local 
+
+
+
+
+
+
+
+
+a = LOAD '/homr/ankit/Desktop/csvfile.txt' using PigStorage(',');
+dump a;
+c = union a,b;
+dump c;
+SPLIT c into d if $0>=5 , e if $0<5;
+dump d;
+dump  e;
+k = FOREACH c GENERATE$1 $1, $1*$2;
+dump k;
+g= GROUP c BY $1;
+dump k;
+f = FILTER c BY $0>=5;
+dump f;
+
+
+
+
+
+
+
+a = LOAD '/homr/ankit/Desktop/csvfile.txt';
+b = FOREACH a GENERATE flatten (TOKENIZER((chaararray)$0)) as word;
+c = GROUP b BY word;
+d = FOREACH c GENERATE group,COUNT(b);
+dump d;
+
+
+
+
+
+history;

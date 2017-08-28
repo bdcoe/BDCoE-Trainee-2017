@@ -1,0 +1,5 @@
+A library offer a limited set of functionality related to a specific topic. Does one thing and try to do it well.
+
+A Framework, frames the way you will develop your code. It instruct you how to solve the problem.
+
+or : a library plugs into your code, your code plugs into a framework.

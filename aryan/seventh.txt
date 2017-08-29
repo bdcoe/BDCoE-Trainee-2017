@@ -1,0 +1,4 @@
+styuding kafka and twitter streaming
+
+to create topic 
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --prtiiton 

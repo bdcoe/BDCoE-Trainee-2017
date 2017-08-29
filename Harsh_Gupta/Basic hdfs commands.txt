@@ -1,0 +1,77 @@
+1.
+hadoop version --- Print the Hadoop version
+
+2. 
+hadoop fs -ls / --- List the contents of the root directory in HDFS
+
+3. 
+hdfs balancer --- Run a cluster balancing utility
+
+4. 
+hdfs dfs -put data/sample.txt /user/training/hadoop --- Add a sample text file from the local directory
+named “data” to a directory.
+
+5. 
+hdfs dfs -du -s -h hadoop/retail --- See how much space this directory occupies in HDFS.
+
+6. 
+hdfs dfs -rm hadoop/retail/customers --- Delete a file ‘customers’ from the “retail” directory.
+
+
+7. 
+hadoop fs -rm hadoop/retail/* --- Delete all files from the “retail” directory using a wildcard.
+
+8. 
+hdfs dfs -expunge --- To empty the hdfs trash
+
+9. 
+hdfs dfs -rm -r hadoop/retail --- Finally, remove the entire retail directory and all of its contents in HDFS.
+
+10.
+hdfs -copyFromLocal /home/training/purchases.txt hadoop/ --- Add the purchases.txt file from the local directory
+named “/home/training/” to the hadoop directory you created in HDFS
+
+11. 
+hdfs dfs -cat hadoop/purchases.txt --- To view the contents of your text file purchases.txt which is present 
+in your hadoop directory.
+
+12.
+hdfs dfs -copyToLocal hadoop/purchases.txt /home/training/data --- Add the purchases.txt file from “hadoop” directory which is present in HDFS directory
+to the directory “data” which is present in your local directory
+
+13. 
+hdfs dfs -cp /user/training/*.txt /user/training/hadoop --- cp is used to copy files between directories present 
+in HDFS
+
+
+14.‘-get’ command can be used alternaively to ‘-copyToLocal’ command
+hdfs dfs -get hadoop/sample.txt /home/training/
+
+15. Display last line of the file “purchases.txt” to stdout.
+hdfs dfs -tail hadoop/purchases.txt
+
+16. Move a directory from one location to other
+hdfs dfs -mv hadoop try
+
+17. Default replication factor to a file is 3.
+Use ‘-setrep’ command to change replication factor of a file
+hdfs dfs -setrep -w 2 try/hello
+
+
+18. 
+hdfs dfsadmin -safemode leave --- Command to make the name node leave safe mode
+
+19. 
+hdfs dfs --- List all the hadoop file system shell commands
+
+20.
+hdfs dfs -help --- to ask for help.
+
+21. 
+hdfs dfsadmin -safemode enter --- Command to make the name node enter safe mode
+
+22.
+hdfs dfs -report --- to see the working condition of cluster.
+
+23.
+hdfs dfs -cat filename --- to see the file in Hadoop.

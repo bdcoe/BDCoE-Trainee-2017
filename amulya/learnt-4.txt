@@ -1,0 +1,20 @@
+The reason is that Hadoop framework is based on a simple programming model (MapReduce) and it enables a computing solution that is scalable, flexible, fault-tolerant and cost effective. 
+Spark was introduced by Apache Software Foundation for speeding up the Hadoop computational computing software process.It has its own cluster management. Hadoop is just one of the ways to implement Spark.
+Spark uses Hadoop in two ways – one is storage and second is processing. 
+It extends the MapReduce model to efficiently use it for more types of computations, which includes interactive queries and stream processing. The main feature of Spark is its in-memory cluster computing that increases the processing speed of an application.
+Spark is designed to cover a wide range of workloads such as batch applications, iterative algorithms, interactive queries and streaming.
+Apache Spark Architecture is based on two main abstractions-
+
+Resilient Distributed Datasets (RDD)
+Directed Acyclic Graph (DAG)
+RDD’s are collection of data items that are split into partitions and can be stored in-memory on workers nodes of the spark cluster. Spark RDD’s support two different types of operations – Transformations and Actions
+Direct - Transformation is an action which transitions data partition state from A to B.
+
+Acyclic -Transformation cannot return to the older partition
+
+DAG is a sequence of computations performed on dataThe DAG abstraction helps eliminate the Hadoop MapReduce multi0stage execution model and provides performance enhancements over Hadoop.
+Apache Spark follows a master/slave architecture with two main daemons and a cluster manager –
+
+Master Daemon – (Master/Driver Process)
+Worker Daemon –(Slave Process)
+A spark cluster has a single Master and any number of Slaves/Workers.

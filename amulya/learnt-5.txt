@@ -1,0 +1,31 @@
+It gets used for two broad classes of application:
+
+Building real-time streaming data pipelines that reliably get data between systems or applications
+Building real-time streaming applications that transform or react to the streams of data.
+
+Kafka is run as a cluster on one or more servers.
+The Kafka cluster stores streams of records in categories called topics.
+Each record consists of a key, a value, and a timestamp.
+
+
+API- a set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
+The Producer API allows an application to publish a stream of records to one or more Kafka topics.
+The Consumer API allows an application to subscribe to one or more topics and process the stream of records produced to them.
+The Streams API allows an application to act as a stream processor, consuming an input stream from one or more topics and producing an output stream to one or more output topics, effectively transforming the input streams to output streams.
+The Connector API allows building and running reusable producers or consumers that connect Kafka topics to existing applications or data systems. For example, a connector to a relational database might capture every change to a table.
+
+A topic is a category or feed name to which records are published.
+For each topic, the Kafka cluster maintains a partitioned log.
+Each partition is an ordered, immutable sequence of records.The records in the partitions are each assigned a sequential id number called the offset that uniquely identifies each record within the partition.
+The Kafka cluster retains all published records—whether or not they have been consumed—using a configurable retention period. For example, if the retention policy is set to two days, then for the two days after a record is published, it is available for consumption, after which it will be discarded to free up space.
+This offset is controlled by the consumer: normally a consumer will advance its offset linearly as it reads records, but, in fact, since the position is controlled by the consumer it can consume records in any order it likes. 
+
+AS A MESSAGING SYSTEM-
+By having a notion of parallelism—the partition—within the topics, Kafka is able to provide both ordering guarantees and load balancing over a pool of consumer processes. This is achieved by assigning the partitions in the topic to the consumers in the consumer group so that each partition is consumed by exactly one consumer in the group.
+The consumer group concept in Kafka generalizes these two concepts. As with a queue the consumer group allows you to divide up processing over a collection of processes (the members of the consumer group). As with publish-subscribe, Kafka allows you to broadcast messages to multiple consumer groups.
+
+AS A STORAGE SYSTEM-
+Kafka as a kind of special purpose distributed filesystem dedicated to high-performance, low-latency commit log storage, replication, and propagation.Data written to Kafka is written to disk and replicated for fault-tolerance.
+
+AS A STREAM PROCESSOR-
+In Kafka a stream processor is anything that takes continual streams of data from input topics, performs some processing on this input, and produces continual streams of data to output topics.It is possible to do simple processing directly using the producer and consumer APIs. However for more complex transformations Kafka provides a fully integrated Streams API. This allows building applications that do non-trivial processing that compute aggregations off of streams or join streams together.

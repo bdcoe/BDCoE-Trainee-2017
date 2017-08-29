@@ -1,0 +1,77 @@
+                                         DATA SCIENCE
+
+
+# NEED  OF  DATA SCIENCE-------
+
+dataflow                                               prediction
+unstructured data                                      decision making
+data storage                -------------------->>>>   pattern            ----------------->> data science
+lack of predictive analytics                           discovery
+lack of scientifc insights
+
+
+# EARLIER                                  #NOW
+1. sructured data                       1. unstructured / structured data
+2. data warehouse                       2. hadoop
+3. traditional BI                       3. data science algo
+4.predetermined report only              4. scientific discovery
+
+
+@@ recommend the right product to right customer to enhance business.
+@@ predict the characterstics of high LTV customers and helps in customer segmentation.
+@@ build intelligence and ability in machines.
+@@ predict fradulent transactions beforehand.
+@@ perform sentiment analysis to predict the outcome of elections.
+
+#  WHAT IS DATA SCIENCE??
+
+blend of various tools,algo and ML principles with goal to discover hidden patterns from raw data.
+used to make decisions nd predictions.
+
+# USE CASES OF DATASCIENCE-------
+
+>> sports                >> credit & insurance
+>>amazon                 >> automation
+>>google car             >> social media
+>> travel                >> marketing
+>> health care
+>> sales 
+
+# BUSINESS INTELLIGENCE  VS. DATASCIENCE--------
+ 
+CHARACTERSTICS 
+                                     BI                                  DS
+1. perspective                looking backward                   looking forward
+2.data sources                  structured                       unstructured/structured
+3. approach                 statistics & visualization          statistics,ML,graph analysis,NLP
+4. focus                     past & present                          present & future
+5. tools                 pentaho,microsoft,BI,qlikview,R           rapid miner, big ML,R
+
+
+# TOOLS USED IN DATASCIENCE----------
+
+1. DATA ANALYSIS-->>>
+ * R
+ * spark
+ * python
+ * SAS
+
+
+2. DATA WAREHOUSING--->>
+ * hadoop
+ * SQL 
+ * hive
+
+3. VISUALIZATION-->>
+ * R 
+ * tableau
+ * raw
+
+4. ML-->>
+ * spark
+ * mahout
+ * azure ML studio
+
+# LIFECYCLE OF DATASCIENCE----------------------
+              
+ discovery-->> data preparation-->> model planning -->> model building -->> operationalize-->> communicate results  

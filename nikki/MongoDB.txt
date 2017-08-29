@@ -1,0 +1,24 @@
+MongoDB
+*cross-platform
+* open-source document database
+ and leading NoSQL database
+*written in C++
+*provides, high performance,high availability, and easy scalability
+works on concept of collection nd document.
+*uses JSON-like documents with schemas.
+
+how MongoDB form 
+A document is a set of key-value pairs.
+Collection is a group of MongoDB documents.
+Database is a physical container for collections.
+A single MongoDB server typically has multiple databases.
+
+APPLICATION
+**low latency
+**Rich fast querying
+**flexible indexing
+**aggregation in database
+**known data relationships
+
+~~studid abt project elasticsearch
+~~started working on kibana

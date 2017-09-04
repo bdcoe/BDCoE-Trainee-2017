@@ -1,0 +1,4 @@
+         "why tez came when spark was already there?"
+
+There is one use case where Tez can score significantly over Spark. This is the one which involves extreme scale - for instance, if you want to join a 100Terabyte table to another 100Terabyte table, Hive 13 on Tez is a better option than Shark.
+Both frameworks claim to support Pig and Hive. When tried running Pig on Spark using the Spork project, but had some issues. This may mean that full Pig support for Spark is still under construction.

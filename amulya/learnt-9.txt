@@ -1,0 +1,6 @@
+SSD- solid state disk
+A solid-state drive (SSD) is a nonvolatile storage device that stores persistent data on solid-state flash memory. 
+information is stored in microchips. Conversely, a hard disk drive uses a mechanical arm with a read/write head to move around and read information from the right location on a storage platter. This difference is what makes SSD so much faster.
+
+Hybrid storage-
+They're bigger than an SSD and faster than a plain-old mechanical drive. These are sometimes called “SSHDs” — solid-state hybrid drives. The drive automatically caches data in the solid-state storage for you, offering faster speeds for the files you use most.

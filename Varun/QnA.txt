@@ -1,0 +1,15 @@
+question 1 
+How does the client optimizes a process?
+
+Answer
+When a program is forwarded by the client than simultaneously a data flow graph 
+or optimizer plan is submitted by the client to the job manager and the program
+is thus optimized by this data flow graph
+
+Question 2
+What happens if system crashes on newly loaded data btw two checkpoints?
+
+Answer
+THe system reloads itself to previous chekpoint where the last input stream was 
+processed and as data stream is sourced from reliable sources like Kafka an earlier 
+version of the stream is requested.

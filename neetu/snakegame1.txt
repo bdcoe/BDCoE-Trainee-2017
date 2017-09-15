@@ -1,0 +1,380 @@
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.Random;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class Play extends JPanel implements KeyListener, ActionListener
+{
+	private ImageIcon titleImage;
+	
+	//for movement of snake in panel we need 2 array
+	private int snakexlength[] = new int[750];
+	private int snakeylength[] = new int[750];
+	
+	// to check at which side snake is moving
+	private boolean left = false;
+	private boolean right = false;
+	private boolean up = false;
+	private boolean down = false;
+	
+	// image of snake in all direction
+	private ImageIcon downmouth;
+	private ImageIcon upmouth;
+	private ImageIcon leftmouth;
+	private ImageIcon rightmouth;
+	
+	// for movement of snake iteratively
+	private Timer timer;    //this manage speed of snake inside panel
+	
+	private int delay=150;
+	private ImageIcon snakeimage;
+	private int lengthsnake = 3; // default snake length
+	private int move = 0;
+	private int[] foodxpos= {25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
+	private int[] foodypos= {75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650};
+	private ImageIcon enemyimage;
+	private Random random=new Random();
+	
+	//for random position of snake food
+	private int xpos=random.nextInt(34);
+	private int ypos=random.nextInt(23);
+	
+	int scores=0;
+	
+	//constructor 
+	public Play()
+	{
+		addKeyListener(this);
+		setFocusable(true);
+		setFocusTravelKeysEnabled(false);
+		timer = new Timer(delay, this);
+		 timer.start();
+		
+		
+		
+	}
+	private void setFocusTravelKeysEnabled(boolean b)
+	{
+		
+		
+	}
+	public void paint(Graphics g) 
+	{
+		//border of title
+		g.setColor(Color.BLUE);
+		g.drawRect(24, 10, 851, 55);
+		
+		//draw title image
+		titleImage = new ImageIcon("snaketitle.jpg");
+		titleImage.paintIcon(this, g, 25, 11);
+		
+		//draw border for play area
+		g.setColor(Color.GRAY);
+		g.drawRect(24, 74, 851, 577);
+		
+		//background of game area
+		g.setColor(Color.BLACK);
+		g.fillRect(25, 75, 850, 575);
+		
+		if(move == 0)
+		{
+			snakexlength[2] = 50;
+			snakexlength[1] = 75;
+			snakexlength[0] = 100;
+			
+			snakeylength[2] = 100;
+			snakeylength[1] = 100;
+			snakeylength[0] = 100;
+			
+		}
+		
+		//draw score panel
+		g.setColor(Color.WHITE);
+		g.setFont(new Font ("arial", Font.BOLD, 15)); 
+		g.drawString("SCORES: "+scores, 780 ,30);
+		
+		//draw length of snake after eating food
+				g.setColor(Color.WHITE);
+				g.setFont(new Font ("arial", Font.BOLD, 14)); 
+				g.drawString("LENGTH: "+lengthsnake, 780 ,50);
+				
+		
+		leftmouth = new ImageIcon("leftmouth.png");
+		leftmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
+		
+		for(int i=0; i<lengthsnake; i++)
+		{
+			// detecting direction of snake
+			
+			if(i==0 && left)
+			{
+				leftmouth = new ImageIcon("leftmouth.png");
+				leftmouth.paintIcon(this, g, snakexlength[i], snakeylength[i]);
+			}
+			if(i==0 && right)
+			{
+				rightmouth = new ImageIcon("rightmouth.png");
+				rightmouth.paintIcon(this, g, snakexlength[i], snakeylength[i]);
+			}
+			if(i==0 && up)
+			{
+				upmouth = new ImageIcon("upmouth.png");
+				upmouth.paintIcon(this, g, snakexlength[i], snakeylength[i]);
+			}
+			if(i==0 && down)
+			{
+				downmouth = new ImageIcon("downmouth.png");
+				downmouth.paintIcon(this, g, snakexlength[i], snakeylength[i]);
+			}
+			if(i!=0)
+			{
+				snakeimage = new ImageIcon("snakeimage.png");
+				snakeimage.paintIcon(this, g, snakexlength[i], snakeylength[i]);
+			}
+		}
+		enemyimage=new ImageIcon("enemy.png");
+		
+		// now checking intersection
+		if((foodxpos[xpos]==snakexlength[0])&&(foodypos[ypos]==snakeylength[0]))
+		{
+			lengthsnake+=1;
+			scores++;
+			xpos=random.nextInt(34);
+			ypos=random.nextInt(23);
+		}
+		enemyimage.paintIcon(this, g, foodxpos[xpos], foodypos[ypos]);
+		
+		// checking for game over condition
+		
+		for(int a=1; a<lengthsnake; a++)
+		{
+			if((snakexlength[a]==snakexlength[0])&&(snakeylength[a]==snakeylength[0]))// HERE 0 DETERMINE THE POSITION OF HEAD
+			{
+				right=false;
+				left=false;
+				up=false;
+				down=false;
+				lengthsnake=3;
+				scores=0;
+				g.setColor(Color.WHITE);
+				g.setFont(new Font("arial",Font.BOLD,60));
+				g.drawString("GAME OVER", 250, 400);
+				
+			}
+		}
+				
+	}
+
+
+	@Override
+	public void keyPressed(KeyEvent e) 
+	{
+		//CONNECTING THE KEYBOARD KEY WITH THE MOVEMENT OF SNAKE
+		if( e.getKeyCode()==KeyEvent.VK_RIGHT)
+		{
+			move++;
+			
+			right=true;
+			if(!left)
+				right=true;
+			
+			else
+			{
+				right=false;
+				left=true;
+			}
+			up = false;
+			down = false;
+			
+		}
+		if( e.getKeyCode()==KeyEvent.VK_UP)
+		{
+			move++;
+			
+			up=true;
+			if(!down)
+				up=true;
+			else
+			{
+				up=false;
+				down=true;
+			}
+			right = false;
+			left = false;
+			
+		}
+		if( e.getKeyCode()==KeyEvent.VK_LEFT)
+		{
+			move++;
+			left=true;
+			if(!right)
+				left=true;
+			else
+			{
+				left=false;
+				right=true;
+			}
+			up = false;
+			down = false;
+		}
+		if( e.getKeyCode()==KeyEvent.VK_DOWN)
+		{
+			move++;
+			down=true;
+			if(!up)
+				down=true;
+			else
+			{
+				down=false;
+				up=true;
+			}
+			left = false;
+			right = false;
+			
+		}
+		
+		
+	}
+
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		// CODE FOR THE MOVEMENT OF SNAKE
+		timer.start();
+		if(left)
+		{
+			for(int r = lengthsnake-1; r>=0; r--)
+			{
+				snakeylength[r+1] = snakeylength[r];
+			}
+			for(int r = lengthsnake; r>=0; r--)
+			{
+				//x-length checking
+				if(r==0)
+				{
+				snakexlength[r] = snakexlength[r]-25;
+			    }
+				else
+				{
+						snakexlength[r]=snakexlength[r-1];
+				}
+				
+				// condition for left border touching
+				
+				if (snakexlength[r]<25)
+				{
+					snakexlength[r]=850;
+				}
+			
+		   }
+			
+			repaint();
+		}
+		
+			if(right)
+			{
+				for(int r = lengthsnake-1; r>=0; r--)
+				{
+					snakeylength[r+1]=snakeylength[r];
+				}
+				for(int r = lengthsnake; r>=0; r--)
+				{
+					//x-length checking
+					if(r==0)
+					{
+					snakexlength[r] = snakexlength[r]+25;
+				    }
+					else
+					{
+							snakexlength[r]=snakexlength[r-1];
+					}
+					
+					// condition for right border
+					
+					if (snakexlength[r]>850)
+					{
+						snakexlength[r]=25;
+					}
+						
+			}
+				
+			repaint();
+	      }
+			if(down)
+			{
+				for(int r = lengthsnake-1; r>=0; r--)
+				{
+					snakexlength[r+1]=snakexlength[r];
+				}
+				for(int r = lengthsnake; r>=0; r--)
+				{
+					//y-length checking
+					if(r==0)
+					{
+					snakeylength[r] = snakeylength[r]+25;
+				    }
+					else
+					{
+							snakeylength[r]=snakeylength[r-1];
+					}
+					if (snakeylength[r]>625)
+					{
+						snakeylength[r]=75;
+					}
+						
+			}
+				
+			repaint();
+	      }
+			if(up)
+			{
+				for(int r = lengthsnake-1; r>=0; r--)
+				{
+					snakexlength[r+1]=snakexlength[r];
+				}
+				for(int r = lengthsnake; r>=0; r--)
+				{
+					//y-length checking
+					if(r==0)
+					{
+					snakeylength[r] = snakeylength[r]-25;
+				    }
+					else
+					{
+							snakeylength[r]=snakeylength[r-1];
+					}
+					if (snakeylength[r]<75)
+					{
+						snakeylength[r]=625;
+					}
+						
+			     }
+				
+			repaint();
+	       }
+			
+      }
+}
